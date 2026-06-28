@@ -1,34 +1,918 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Нортхаус · Көшбасшылық: теория және практика</title>
-<style>
-:root{--bg:#f6f7fb;--text:#182230;--muted:#667085;--line:#e4e7ec;--primary:#1d4ed8;--primary-soft:#dbeafe;--accent:#047857;--accent-soft:#d1fae5;--danger:#b42318;--danger-soft:#fee4e2;--warning:#92400e;--warning-soft:#fef3c7;--shadow:0 14px 34px rgba(15,23,42,.08);--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:radial-gradient(circle at top left,rgba(29,78,216,.12),transparent 32%),radial-gradient(circle at top right,rgba(4,120,87,.10),transparent 30%),var(--bg);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:24px 0 72px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px;padding:14px 16px;background:rgba(255,255,255,.9);border:1px solid rgba(228,231,236,.95);border-radius:999px;box-shadow:0 8px 24px rgba(15,23,42,.06)}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),#2563eb);color:#fff;font-weight:900}.brand-text{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.pill{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px;font-weight:700}.hero{background:linear-gradient(135deg,#172554 0%,#1d4ed8 54%,#047857 100%);color:#fff;border-radius:30px;padding:42px;box-shadow:var(--shadow);margin-bottom:24px}.eyebrow{display:inline-flex;padding:7px 12px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.24);border-radius:999px;font-size:13px;font-weight:800;margin-bottom:18px}h1{margin:0;font-size:clamp(30px,5vw,56px);line-height:1.08;letter-spacing:-.035em}.hero p{margin:18px 0 0;max-width:870px;color:rgba(255,255,255,.88);font-size:17px}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.hero-chip{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.23);font-size:13px;font-weight:750}.nav-panel{display:grid;gap:14px;margin:24px 0}.nav-title{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 4px}.nav-title h2{margin:0;font-size:22px}.nav-title span{color:var(--muted);font-size:14px}.chapter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.chapter-card{display:block;min-height:125px;padding:16px;border-radius:18px;background:rgba(255,255,255,.92);border:1px solid var(--line);box-shadow:0 10px 24px rgba(15,23,42,.055)}.chapter-num{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:var(--primary-soft);color:var(--primary);font-weight:900;font-size:13px;margin-bottom:12px}.chapter-card strong{display:block;font-size:15px;line-height:1.35;margin-bottom:6px}.chapter-card small{color:var(--muted);font-size:12.5px;line-height:1.38;display:block}.section{margin:28px 0}.content-block{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}.section-kicker{display:inline-flex;color:var(--primary);background:var(--primary-soft);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:900;margin-bottom:12px}.content-block h3{margin:0 0 12px;font-size:clamp(23px,3vw,34px);line-height:1.18}.content-block>p{margin:0 0 18px;color:var(--muted);max-width:960px}.note{padding:15px 16px;background:var(--accent-soft);border:1px solid rgba(4,120,87,.18);border-radius:18px;color:#065f46;font-size:14.5px;margin:16px 0 20px}.theory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.theory-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.theory-card strong{display:block;color:var(--primary);margin-bottom:8px;font-size:15px}.theory-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}.test-box{margin-top:24px;padding:20px;border-radius:22px;background:#f8fbff;border:1px solid var(--line)}.test-box h3{margin:0 0 6px;font-size:22px}.section-desc{margin:0 0 18px!important;font-size:14px;color:var(--muted)}.question{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin:14px 0}.question-title{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;margin-bottom:14px}.q-num{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--primary-soft);color:var(--primary);font-weight:900}.q-text{font-weight:780;line-height:1.45}.options{display:grid;gap:9px}.option{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;font-size:14.5px;line-height:1.45}.option input{margin-top:3px;accent-color:var(--primary)}.option.correct{background:var(--accent-soft);border-color:rgba(4,120,87,.35);color:#065f46;font-weight:700}.option.wrong{background:var(--danger-soft);border-color:rgba(180,35,24,.35);color:#842a20;font-weight:700}.explanation{display:none;margin-top:13px;padding:13px 14px;border-radius:14px;background:var(--warning-soft);border:1px solid rgba(146,64,14,.20);color:#78350f;font-size:14px}.question.checked .explanation{display:block}.btn{border:0;cursor:pointer;border-radius:999px;padding:12px 18px;font-weight:850;font-size:14px}.btn-primary{background:linear-gradient(135deg,var(--primary),#2563eb);color:#fff}.result-panel{display:none;margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--primary-soft);border:1px solid rgba(29,78,216,.18);color:var(--primary);font-size:14px}.result-panel.show{display:block}.floating-up{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:17px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 30px rgba(15,23,42,.16);display:grid;place-items:center;color:var(--primary);font-weight:900}@media(max-width:980px){.chapter-grid,.theory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:30px}}@media(max-width:620px){.page{width:min(100% - 22px,var(--max));padding-top:14px}.topbar{border-radius:22px;align-items:flex-start;flex-direction:column}.chapter-grid,.theory-grid{grid-template-columns:1fr}.hero,.content-block{padding:22px;border-radius:24px}.test-box{padding:15px}.question{padding:15px}}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нортхаус · Көшбасшылық: теория және практика</title>
+  <style>
+:root{--bg:#f6f7fb;--text:#182230;--muted:#667085;--line:#e4e7ec;--primary:#1d4ed8;--primary-soft:#dbeafe;--accent:#047857;--accent-soft:#d1fae5;--danger:#b42318;--danger-soft:#fee4e2;--warning:#92400e;--warning-soft:#fef3c7;--shadow:0 14px 34px rgba(15,23,42,.08);--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:inherit;text-decoration:none}.page{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:24px 0 72px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:0 8px 24px rgba(15,23,42,.06)}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),#2563eb);color:#fff;font-weight:900}.brand-text{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.pill{display:inline-flex;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px;font-weight:700}.hero{background:linear-gradient(135deg,#172554 0%,#1d4ed8 54%,#047857 100%);color:#fff;border-radius:30px;padding:42px;box-shadow:var(--shadow);margin-bottom:24px}.eyebrow{display:inline-flex;padding:7px 12px;background:rgba(255,255,255,.15);border-radius:999px;font-size:13px;font-weight:800;margin-bottom:18px}h1{margin:0;font-size:clamp(30px,5vw,56px);line-height:1.08}.hero p{margin:18px 0 0;max-width:870px;color:rgba(255,255,255,.88);font-size:17px}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.hero-chip{padding:9px 13px;border-radius:999px;background:rgba(255,255,255,.14);font-size:13px;font-weight:750}.nav-panel{display:grid;gap:14px;margin:24px 0}.nav-title{display:flex;align-items:end;justify-content:space-between;gap:16px;padding:0 4px}.nav-title h2{margin:0;font-size:22px}.nav-title span{color:var(--muted);font-size:14px}.chapter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.chapter-card{display:block;min-height:118px;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 24px rgba(15,23,42,.055)}.chapter-num{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:var(--primary-soft);color:var(--primary);font-weight:900;font-size:13px;margin-bottom:12px}.chapter-card strong{display:block;font-size:15px;line-height:1.35;margin-bottom:6px}.chapter-card small{color:var(--muted);font-size:12.5px;line-height:1.38;display:block}.section{margin:28px 0}.content-block{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}.section-kicker{display:inline-flex;color:var(--primary);background:var(--primary-soft);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:900;margin-bottom:12px}.content-block h3{margin:0 0 12px;font-size:clamp(23px,3vw,34px);line-height:1.18}.content-block>p{margin:0 0 18px;color:var(--muted);max-width:960px}.note{padding:15px 16px;background:var(--accent-soft);border-radius:18px;color:#065f46;font-size:14.5px;margin:16px 0 20px}.theory-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.theory-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.theory-card strong{display:block;color:var(--primary);margin-bottom:8px;font-size:15px}.theory-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}.test-box{margin-top:24px;padding:20px;border-radius:22px;background:#f8fbff;border:1px solid var(--line)}.test-box h3{margin:0 0 6px;font-size:22px}.section-desc{margin:0 0 18px!important;font-size:14px;color:var(--muted)}.question{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;margin:14px 0}.question-title{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;margin-bottom:14px}.q-num{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--primary-soft);color:var(--primary);font-weight:900}.q-text{font-weight:780;line-height:1.45}.options{display:grid;gap:9px}.option{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer;font-size:14.5px;line-height:1.45}.option input{margin-top:3px;accent-color:var(--primary)}.option.correct{background:var(--accent-soft);border-color:rgba(4,120,87,.35);color:#065f46;font-weight:700}.option.wrong{background:var(--danger-soft);border-color:rgba(180,35,24,.35);color:#842a20;font-weight:700}.explanation{display:none;margin-top:13px;padding:13px 14px;border-radius:14px;background:var(--warning-soft);color:#78350f;font-size:14px}.question.checked .explanation{display:block}.btn{border:0;cursor:pointer;border-radius:999px;padding:12px 18px;font-weight:850;font-size:14px}.btn-primary{background:linear-gradient(135deg,var(--primary),#2563eb);color:#fff}.result-panel{display:none;margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--primary-soft);color:var(--primary);font-size:14px}.result-panel.show{display:block}.floating-up{position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:17px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 30px rgba(15,23,42,.16);display:grid;place-items:center;color:var(--primary);font-weight:900}@media(max-width:980px){.chapter-grid,.theory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:30px}}@media(max-width:620px){.page{width:min(100% - 22px,var(--max));padding-top:14px}.topbar{border-radius:22px;align-items:flex-start;flex-direction:column}.chapter-grid,.theory-grid{grid-template-columns:1fr}.hero,.content-block{padding:22px;border-radius:24px}.test-box{padding:15px}.question{padding:15px}}
 </style>
 </head>
 <body>
-<a id="top"></a>
-<div class="page">
-<div class="topbar"><div class="brand"><div class="brand-mark">К</div><div class="brand-text">Питер Г. Нортхаус · Көшбасшылық: теория және практика</div></div><div class="top-actions"><a class="pill" href="#chapters">Бөлімдер</a><a class="pill" href="#chapter-1">Мәні</a><a class="pill" href="#chapter-3">Ситуация</a><a class="pill" href="#chapter-5">Этика</a></div></div>
-<header class="hero"><div class="eyebrow">Қосымша әдебиет · Нортхаус · КТ форматы</div><h1>Көшбасшылық: теория және практика</h1><p>Бұл сайт Питер Г. Нортхаус еңбегі бойынша дайындалды. Материал көшбасшылықтың мәні, қасиет пен дағды тәсілдері, мінез-құлық, ситуациялық көшбасшылық, ықпал ету, трансформациялық көшбасшылық, этика, команда және мәдениет тақырыптары арқылы КТ-ға бейімделіп беріледі.</p><div class="hero-meta"><span class="hero-chip">Қазақ тілінде</span><span class="hero-chip">5 жауап нұсқасы</span><span class="hero-chip">1 дұрыс жауап</span><span class="hero-chip">Ірі бөлімдермен</span></div></header>
-<section class="nav-panel" id="chapters"><div class="nav-title"><h2>Ірі бөлімдер</h2><span>Подразделдер жеке көрсетілмейді, мазмұны бөлім ішінде ашылады</span></div><div class="chapter-grid">
-<a class="chapter-card" href="#chapter-1"><span class="chapter-num">1</span><strong>Көшбасшылықтың мәні және табиғаты</strong><small>Көшбасшылықтың мәні</small></a>
-<a class="chapter-card" href="#chapter-2"><span class="chapter-num">2</span><strong>Көшбасшы қасиеттері, дағдылары және мінез-құлық тәсілдері</strong><small>Қасиеттер, дағдылар және мінез-құлық</small></a>
-<a class="chapter-card" href="#chapter-3"><span class="chapter-num">3</span><strong>Жағдайға бейімделу, мақсатқа жетелеу және лидер–мүше алмасуы</strong><small>Ситуациялық, жол-мақсат және LMX</small></a>
-<a class="chapter-card" href="#chapter-4"><span class="chapter-num">4</span><strong>Трансформациялық, шынайы, қызмет етуші және бейімделгіш көшбасшылық</strong><small>Трансформациялық және қызмет етуші көшбасшылық</small></a>
-<a class="chapter-card" href="#chapter-5"><span class="chapter-num">5</span><strong>Ізбасарлық, этика, команда, гендер және мәдениет</strong><small>Ізбасарлық, этика, команда және мәдениет</small></a>
-<a class="chapter-card" href="#chapter-6"><span class="chapter-num">6</span><strong>Нортхаус бойынша көшбасшылық теорияларын қайталау</strong><small>Қорытынды тест</small></a>
-</div></section>
-<section class="section" id="chapter-1"><div class="content-block"><div class="section-kicker">1-бөлім · Көшбасшылықтың мәні</div><h3>Көшбасшылықтың мәні және табиғаты</h3><p>Көшбасшылық — лидер мен ізбасарлар арасында жүретін ықпал ету процесі. Ол топ мүшелерін ортақ мақсатқа бағыттаумен байланысты.</p><div class="note">КТ бойынша бұл бөлім билік, ықпал ету және көшбасшылық негіздерін ашады.</div><div class="theory-grid"><div class="theory-card"><strong>Көшбасшылық</strong><p>Лидер мен ізбасарлар арасындағы ықпал ету процесі.</p></div><div class="theory-card"><strong>Процесс</strong><p>Лидер мен ізбасар арасындағы өзара әрекет.</p></div><div class="theory-card"><strong>Ықпал ету</strong><p>Лидер адамдардың бағыты мен әрекетіне әсер етеді.</p></div><div class="theory-card"><strong>Топ</strong><p>Көшбасшылық топ ішінде көрінеді.</p></div><div class="theory-card"><strong>Ортақ мақсат</strong><p>Топты бір бағытқа біріктіреді.</p></div><div class="theory-card"><strong>Лидер мен ізбасар</strong><p>Лидер ықпал етеді, ізбасар жауап береді.</p></div><div class="theory-card"><strong>Менеджмент айырмасы</strong><p>Менеджмент бақылауға, лидерлік ықпал етуге жақын.</p></div><div class="theory-card"><strong>Билік</strong><p>Бедел, сенім және харизмамен байланысады.</p></div><div class="theory-card"><strong>Тәсілдер</strong><p>Қасиет, дағды, мінез-құлық, ситуация, этика, команда.</p></div></div><div class="test-box" data-test="northouse-chapter-1-test"><h3>Тест тапсырмалары</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Нортхаус бойынша көшбасшылықтың негізгі мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q1_1" value="A"> Жоспарлау мен бақылауды реттейтін әкімшілік жүйе</label><label class="option"><input type="radio" name="q1_1" value="B"> Лидер мен ізбасарлар арасындағы ықпал ету процесі</label><label class="option"><input type="radio" name="q1_1" value="C"> Қызметкерлердің міндетін бөлетін ресми тәртіп</label><label class="option"><input type="radio" name="q1_1" value="D"> Сыртқы ортамен байланысты сипаттайтын басқару бағыты</label><label class="option"><input type="radio" name="q1_1" value="E"> Өндірістік процесті салыстыратын бақылау механизмі</label></div><div class="explanation">Дұрыс жауап: B. Көшбасшылық ықпал ету процесі ретінде түсіндіріледі.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">2</div><div class="q-text">Көшбасшылық анықтамасының негізгі элементі</div></div><div class="options"><label class="option"><input type="radio" name="q1_2" value="A"> Қаржылық жоспар құрылымы</label><label class="option"><input type="radio" name="q1_2" value="B"> Құжат айналымы тәртібі</label><label class="option"><input type="radio" name="q1_2" value="C"> Өндірістік бақылау циклі</label><label class="option"><input type="radio" name="q1_2" value="D"> Ықпал ету, топ және ортақ мақсат</label><label class="option"><input type="radio" name="q1_2" value="E"> Материалдық ресурс қозғалысы</label></div><div class="explanation">Дұрыс жауап: D. Негізгі элементтер: ықпал ету, топ және ортақ мақсат.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">3</div><div class="q-text">Көшбасшылықты процесс ретінде түсіну нені білдіреді?</div></div><div class="options"><label class="option"><input type="radio" name="q1_3" value="A"> Лауазымдық өкілеттікті орындау</label><label class="option"><input type="radio" name="q1_3" value="B"> Тұрақты мінез белгісімен түсіндіру</label><label class="option"><input type="radio" name="q1_3" value="C"> Лидер мен ізбасарлар арасында өзара әрекет жүруі</label><label class="option"><input type="radio" name="q1_3" value="D"> Басқару құрылымының тәуелсіз дамуы</label><label class="option"><input type="radio" name="q1_3" value="E"> Топтан бөлек жеке қабілет ретінде қарау</label></div><div class="explanation">Дұрыс жауап: C. Процесс — лидер мен ізбасар арасындағы өзара әрекет.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">4</div><div class="q-text">Ықпал ету көшбасшылықта қандай рөл атқарады?</div></div><div class="options"><label class="option"><input type="radio" name="q1_4" value="A"> Материалдық ресурстар қозғалысын реттейді</label><label class="option"><input type="radio" name="q1_4" value="B"> Адамдардың бағыты мен әрекетіне әсер етеді</label><label class="option"><input type="radio" name="q1_4" value="C"> Қаржылық нәтижені жоспармен салыстырады</label><label class="option"><input type="radio" name="q1_4" value="D"> Есеп беру формасын өзгертеді</label><label class="option"><input type="radio" name="q1_4" value="E"> Ресми құрылымды автоматты қалыптастырады</label></div><div class="explanation">Дұрыс жауап: B. Ықпал ету көшбасшылықтың өзегі.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">5</div><div class="q-text">Көшбасшылықтың топтық құбылыс екенін көрсететін белгі</div></div><div class="options"><label class="option"><input type="radio" name="q1_5" value="A"> Көшбасшылық топ мүшелерімен байланыс арқылы көрінеді</label><label class="option"><input type="radio" name="q1_5" value="B"> Жеке қызмет сипаттамасына тең болады</label><label class="option"><input type="radio" name="q1_5" value="C"> Топ қатысуынсыз әкімшілік тапсырмаға айналады</label><label class="option"><input type="radio" name="q1_5" value="D"> Ортақ мақсатсыз тұрақты жүйе болады</label><label class="option"><input type="radio" name="q1_5" value="E"> Ізбасарлар сыртқы бақылаушы болады</label></div><div class="explanation">Дұрыс жауап: A. Көшбасшылық топ ішінде қалыптасады.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">6</div><div class="q-text">Ортақ мақсат көшбасшылықта не үшін маңызды?</div></div><div class="options"><label class="option"><input type="radio" name="q1_6" value="A"> Жеке беделді жоғары қою үшін</label><label class="option"><input type="radio" name="q1_6" value="B"> Бақылауды есеппен алмастыру үшін</label><label class="option"><input type="radio" name="q1_6" value="C"> Топ мүшелерін бір бағытқа біріктіру үшін</label><label class="option"><input type="radio" name="q1_6" value="D"> Лауазымдық билікті күшейту үшін</label><label class="option"><input type="radio" name="q1_6" value="E"> Ізбасарларды шешімнен бөлу үшін</label></div><div class="explanation">Дұрыс жауап: C. Ортақ мақсат топты бір бағытқа біріктіреді.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">7</div><div class="q-text">Лидер мен ізбасар арасындағы дұрыс байланыс</div></div><div class="options"><label class="option"><input type="radio" name="q1_7" value="A"> Ізбасарлар процестің сыртында қалады</label><label class="option"><input type="radio" name="q1_7" value="B"> Лидер ықпал етеді, ізбасарлар сол ықпалға жауап береді</label><label class="option"><input type="radio" name="q1_7" value="C"> Байланыс ресми құжатпен алмастырылады</label><label class="option"><input type="radio" name="q1_7" value="D"> Ізбасарлар мақсатқа қатыспайды</label><label class="option"><input type="radio" name="q1_7" value="E"> Лидерлік бақылау актісімен сәйкес келеді</label></div><div class="explanation">Дұрыс жауап: B. Көшбасшылық өзара әрекетке сүйенеді.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">8</div><div class="q-text">Лидерлік пен менеджмент айырмашылығы</div></div><div class="options"><label class="option"><input type="radio" name="q1_8" value="A"> Лидерлік әкімшілік рәсіммен шектеледі</label><label class="option"><input type="radio" name="q1_8" value="B"> Екеуі барлық жағдайда толық бірдей</label><label class="option"><input type="radio" name="q1_8" value="C"> Менеджмент функциясыз жүзеге асады</label><label class="option"><input type="radio" name="q1_8" value="D"> Менеджмент бақылауға, лидерлік ықпал етуге жақын</label><label class="option"><input type="radio" name="q1_8" value="E"> Лидерлік есептеумен шектеледі</label></div><div class="explanation">Дұрыс жауап: D. Менеджмент пен лидерлік акценті әртүрлі.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">9</div><div class="q-text">Көшбасшылық пен биліктің байланысы</div></div><div class="options"><label class="option"><input type="radio" name="q1_9" value="A"> Билік көшбасшылыққа қатысы жоқ</label><label class="option"><input type="radio" name="q1_9" value="B"> Көшбасшылық ықпал етуден бөлек</label><label class="option"><input type="radio" name="q1_9" value="C"> Көшбасшылық ықпал етуге сүйенетіндіктен билікпен байланысады</label><label class="option"><input type="radio" name="q1_9" value="D"> Лидерлік билік түрлерімен байланыспайды</label><label class="option"><input type="radio" name="q1_9" value="E"> Көшбасшылық билікті бақылау ретінде ғана қолданады</label></div><div class="explanation">Дұрыс жауап: C. Көшбасшылық ықпал етуге сүйенеді.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">10</div><div class="q-text">Нортхаус еңбегіндегі тәсілдер қатары</div></div><div class="options"><label class="option"><input type="radio" name="q1_10" value="A"> Шығын, баланс, қаржылық цикл</label><label class="option"><input type="radio" name="q1_10" value="B"> Қойма, логистика, өндірістік жоспар</label><label class="option"><input type="radio" name="q1_10" value="C"> Дебиторлық берешек, капитал құны</label><label class="option"><input type="radio" name="q1_10" value="D"> Тауар бағасы, өткізу арнасы</label><label class="option"><input type="radio" name="q1_10" value="E"> Қасиет, дағды, мінез-құлық және ситуациялық тәсілдер</label></div><div class="explanation">Дұрыс жауап: E. Нортхаус бірнеше көшбасшылық тәсілін қарастырады.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-1-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-1-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<section class="section" id="chapter-2"><div class="content-block"><div class="section-kicker">2-бөлім · Қасиеттер, дағдылар және мінез-құлық</div><h3>Көшбасшы қасиеттері, дағдылары және мінез-құлық тәсілдері</h3><p>Бұл бөлім қасиеттер тәсілі, дағдылар тәсілі және мінез-құлық тәсілін ашады.</p><div class="note">КТ бойынша басшылық стильдері мен көшбасшылық негіздері қарастырылады.</div><div class="theory-grid"><div class="theory-card"><strong>Қасиеттер тәсілі</strong><p>Көшбасшылықты тұлғаның жеке сипаттары арқылы түсіндіреді.</p></div><div class="theory-card"><strong>Негізгі қасиеттер</strong><p>Интеллект, өзіне сенімділік, табандылық, адалдық, әлеуметтік қабілет.</p></div><div class="theory-card"><strong>Интеллект</strong><p>Мәселені түсінуге және ақпаратты талдауға көмектеседі.</p></div><div class="theory-card"><strong>Өзіне сенімділік</strong><p>Шешім қабылдау мен жауапкершілікке әсер етеді.</p></div><div class="theory-card"><strong>Табандылық</strong><p>Қиындыққа қарамастан мақсатқа ұмтылу.</p></div><div class="theory-card"><strong>Адалдық</strong><p>Сенімге лайық болу және уәдені сақтау.</p></div><div class="theory-card"><strong>Әлеуметтік қабілет</strong><p>Адамдармен байланыс орнату.</p></div><div class="theory-card"><strong>Дағдылар тәсілі</strong><p>Үйренуге және дамытуға болатын қабілеттер жүйесі.</p></div><div class="theory-card"><strong>Мінез-құлық тәсілі</strong><p>Лидердің әрекет үлгілерін талдайды.</p></div></div><div class="test-box" data-test="northouse-chapter-2-test"><h3>Тест тапсырмалары</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Қасиеттер тәсілінің негізгі мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q2_1" value="A"> Тапсырманы жағдайға қарай бөлу</label><label class="option"><input type="radio" name="q2_1" value="B"> Тұлғаның жеке сипаттары арқылы түсіндіру</label><label class="option"><input type="radio" name="q2_1" value="C"> Лидер–мүше алмасуын бағалау</label><label class="option"><input type="radio" name="q2_1" value="D"> Мәдениетті басты орынға қою</label><label class="option"><input type="radio" name="q2_1" value="E"> Команда рөлін анықтау</label></div><div class="explanation">Дұрыс жауап: B. Қасиеттер тәсілі жеке сипаттарға сүйенеді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">2</div><div class="q-text">Көшбасшылықпен жиі байланыстырылатын қасиеттер</div></div><div class="options"><label class="option"><input type="radio" name="q2_2" value="A"> Интеллект, өзіне сенімділік, табандылық, адалдық</label><label class="option"><input type="radio" name="q2_2" value="B"> Ресми лауазым, әкімшілік құқық</label><label class="option"><input type="radio" name="q2_2" value="C"> Жалақы жүйесі, есеп тәртібі</label><label class="option"><input type="radio" name="q2_2" value="D"> Құжат айналымы, материал қоры</label><label class="option"><input type="radio" name="q2_2" value="E"> Сыртқы орта, технология</label></div><div class="explanation">Дұрыс жауап: A. Нортхаус негізгі лидерлік қасиеттерді атайды.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">3</div><div class="q-text">Интеллект көшбасшыға қалай көмектеседі?</div></div><div class="options"><label class="option"><input type="radio" name="q2_3" value="A"> Ресми билікті автоматты күшейтеді</label><label class="option"><input type="radio" name="q2_3" value="B"> Пікірді ескермеуге мүмкіндік береді</label><label class="option"><input type="radio" name="q2_3" value="C"> Мәселені түсінуге және ақпаратты талдауға көмектеседі</label><label class="option"><input type="radio" name="q2_3" value="D"> Қарым-қатынасты ережемен алмастырады</label><label class="option"><input type="radio" name="q2_3" value="E"> Лауазымдық құқықпен ғана байланыстырады</label></div><div class="explanation">Дұрыс жауап: C. Интеллект талдау мен бағыт беруге көмектеседі.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">4</div><div class="q-text">Өзіне сенімділік рөлі</div></div><div class="options"><label class="option"><input type="radio" name="q2_4" value="A"> Пікірді бағалаудан бас тарту</label><label class="option"><input type="radio" name="q2_4" value="B"> Шешім қабылдауда тұрақтылық пен жауапкершілік беру</label><label class="option"><input type="radio" name="q2_4" value="C"> Ресми бақылауды алмастыру</label><label class="option"><input type="radio" name="q2_4" value="D"> Ізбасардан толық тәуелсіз ету</label><label class="option"><input type="radio" name="q2_4" value="E"> Жағдайды талдаусыз стиль таңдау</label></div><div class="explanation">Дұрыс жауап: B. Өзіне сенімділік шешімге әсер етеді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">5</div><div class="q-text">Табандылық қалай көрінеді?</div></div><div class="options"><label class="option"><input type="radio" name="q2_5" value="A"> Қиындыққа қарамастан мақсатқа ұмтылу</label><label class="option"><input type="radio" name="q2_5" value="B"> Қарым-қатынасты елемеу</label><label class="option"><input type="radio" name="q2_5" value="C"> Өкілеттікті күшейту</label><label class="option"><input type="radio" name="q2_5" value="D"> Қатысуды шектеу</label><label class="option"><input type="radio" name="q2_5" value="E"> Командалық мақсатты жеке мүддеге ауыстыру</label></div><div class="explanation">Дұрыс жауап: A. Табандылық — мақсатқа тұрақты ұмтылу.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">6</div><div class="q-text">Адалдық неге маңызды?</div></div><div class="options"><label class="option"><input type="radio" name="q2_6" value="A"> Билікті беделден бөледі</label><label class="option"><input type="radio" name="q2_6" value="B"> Байланысты бақылаумен алмастырады</label><label class="option"><input type="radio" name="q2_6" value="C"> Лидердің сенімге лайық болуына әсер етеді</label><label class="option"><input type="radio" name="q2_6" value="D"> Тапсырманы қатынастан бөледі</label><label class="option"><input type="radio" name="q2_6" value="E"> Харизмамен ғана түсіндіреді</label></div><div class="explanation">Дұрыс жауап: C. Адалдық сенім қалыптастырады.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">7</div><div class="q-text">Әлеуметтік қабілеттің маңызы</div></div><div class="options"><label class="option"><input type="radio" name="q2_7" value="A"> Қаржылық көрсеткішті салыстыру</label><label class="option"><input type="radio" name="q2_7" value="B"> Өндірістік стандартты күшейту</label><label class="option"><input type="radio" name="q2_7" value="C"> Нұсқаулықты алмастыру</label><label class="option"><input type="radio" name="q2_7" value="D"> Адамдармен байланыс орнатуға көмектесу</label><label class="option"><input type="radio" name="q2_7" value="E"> Лидерлікті топтан бөлу</label></div><div class="explanation">Дұрыс жауап: D. Әлеуметтік қабілет байланысқа көмектеседі.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">8</div><div class="q-text">Дағдылар тәсілінің ерекшелігі</div></div><div class="options"><label class="option"><input type="radio" name="q2_8" value="A"> Туа біткен қасиетпен шектеу</label><label class="option"><input type="radio" name="q2_8" value="B"> Дамытуға болатын қабілеттер жүйесі ретінде қарау</label><label class="option"><input type="radio" name="q2_8" value="C"> Лауазымдық билікпен теңестіру</label><label class="option"><input type="radio" name="q2_8" value="D"> Дайындық деңгейін өлшем ету</label><label class="option"><input type="radio" name="q2_8" value="E"> Харизманы жалғыз шарт ету</label></div><div class="explanation">Дұрыс жауап: B. Дағдылар тәсілі дамытуға болатын қабілеттерді қарастырады.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">9</div><div class="q-text">Негізгі дағдылар қатары</div></div><div class="options"><label class="option"><input type="radio" name="q2_9" value="A"> Лауазымдық, бақылау, есеп</label><label class="option"><input type="radio" name="q2_9" value="B"> Құжат, нұсқаулық, форма</label><label class="option"><input type="radio" name="q2_9" value="C"> Сыртқы орта, технология, нарық</label><label class="option"><input type="radio" name="q2_9" value="D"> Мәртебе, ресурс, бақылау</label><label class="option"><input type="radio" name="q2_9" value="E"> Техникалық, адамдармен жұмыс, концептуалдық</label></div><div class="explanation">Дұрыс жауап: E. Негізгі дағдылар үшке бөлінеді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">10</div><div class="q-text">Техникалық дағды мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q2_10" value="A"> Сенімді қатынас орнату</label><label class="option"><input type="radio" name="q2_10" value="B"> Ұйымды тұтас көру</label><label class="option"><input type="radio" name="q2_10" value="C"> Кәсіби сала бойынша білімді қолдану</label><label class="option"><input type="radio" name="q2_10" value="D"> Бейресми ықпал орнату</label><label class="option"><input type="radio" name="q2_10" value="E"> Ортақ мақсатты сеніммен байланыстыру</label></div><div class="explanation">Дұрыс жауап: C. Техникалық дағды нақты білімді қолдануға қатысты.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">11</div><div class="q-text">Адамдармен жұмыс дағдысы</div></div><div class="options"><label class="option"><input type="radio" name="q2_11" value="A"> Топ мүшелерін түсіну, ынталандыру, бірлескен әрекет ұйымдастыру</label><label class="option"><input type="radio" name="q2_11" value="B"> Құралды қолдану</label><label class="option"><input type="radio" name="q2_11" value="C"> Стратегияны қаржымен алмастыру</label><label class="option"><input type="radio" name="q2_11" value="D"> Стандартты сыртқы ортамен салыстыру</label><label class="option"><input type="radio" name="q2_11" value="E"> Өкілеттікті ережемен күшейту</label></div><div class="explanation">Дұрыс жауап: A. Бұл дағды адамдармен тиімді жұмыс істеуге қатысты.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">12</div><div class="q-text">Концептуалдық дағды мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q2_12" value="A"> Құрал техникасын ғана білдіреді</label><label class="option"><input type="radio" name="q2_12" value="B"> Бақылау ережесімен шектеледі</label><label class="option"><input type="radio" name="q2_12" value="C"> Ұйымды тұтас көру және күрделі жағдайды түсіндіру</label><label class="option"><input type="radio" name="q2_12" value="D"> Жұмысты стандартпен салыстыру</label><label class="option"><input type="radio" name="q2_12" value="E"> Күнделікті жеке сөйлесу тәртібі</label></div><div class="explanation">Дұрыс жауап: C. Концептуалдық дағды тұтас ойлауға қатысты.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">13</div><div class="q-text">Мінез-құлық тәсілі нені талдайды?</div></div><div class="options"><label class="option"><input type="radio" name="q2_13" value="A"> Туа біткен қасиетті</label><label class="option"><input type="radio" name="q2_13" value="B"> Лидердің топпен жұмыс кезіндегі әрекетін</label><label class="option"><input type="radio" name="q2_13" value="C"> Ізбасар дайындығын</label><label class="option"><input type="radio" name="q2_13" value="D"> Ресми билік деңгейін</label><label class="option"><input type="radio" name="q2_13" value="E"> Мәдени бейімделуді</label></div><div class="explanation">Дұрыс жауап: B. Мінез-құлық тәсілі лидер әрекетін талдайды.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">14</div><div class="q-text">Тапсырмаға бағытталған мінез-құлық</div></div><div class="options"><label class="option"><input type="radio" name="q2_14" value="A"> Қолдау көрсету</label><label class="option"><input type="radio" name="q2_14" value="B"> Сенім құру</label><label class="option"><input type="radio" name="q2_14" value="C"> Жеке дамуға назар аудару</label><label class="option"><input type="radio" name="q2_14" value="D"> Мақсатты нақтылау, рөлдерді белгілеу, нәтижені бақылау</label><label class="option"><input type="radio" name="q2_14" value="E"> Көңіл-күйді өлшем ету</label></div><div class="explanation">Дұрыс жауап: D. Тапсырмаға бағытталу жұмыс пен нәтижеге қатысты.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">15</div><div class="q-text">Қарым-қатынасқа бағытталған мінез-құлық</div></div><div class="options"><label class="option"><input type="radio" name="q2_15" value="A"> Кестені бақылау</label><label class="option"><input type="radio" name="q2_15" value="B"> Рөлдерді бөлу</label><label class="option"><input type="radio" name="q2_15" value="C"> Қолдау көрсету, тыңдау және сенім құру</label><label class="option"><input type="radio" name="q2_15" value="D"> Мақсатты нақтылау</label><label class="option"><input type="radio" name="q2_15" value="E"> Есеп тәртібін бекіту</label></div><div class="explanation">Дұрыс жауап: C. Қарым-қатынасқа бағытталу қолдау мен сенімге қатысты.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-2-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-2-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<section class="section" id="chapter-3"><div class="content-block"><div class="section-kicker">3-бөлім · Ситуациялық, жол-мақсат және LMX</div><h3>Жағдайға бейімделу, мақсатқа жетелеу және лидер–мүше алмасуы</h3><p>Бұл бөлім ситуациялық көшбасшылық, жол-мақсат теориясы және LMX тәсілін қысқа ашады.</p><div class="note">Лидер жағдайға, ізбасардың дайындығына, тапсырмаға және қатынас сапасына қарай әрекет етеді.</div><div class="theory-grid"><div class="theory-card"><strong>Ситуациялық көшбасшылық</strong><p>Лидер стилі даму деңгейі мен жағдай талабына сәйкес болуы керек.</p></div><div class="theory-card"><strong>Директивті мінез-құлық</strong><p>Не істеу, қалай орындау және нәтиже нақты айтылады.</p></div><div class="theory-card"><strong>Қолдаушы мінез-құлық</strong><p>Тыңдау, қолдау, сенім және қатысу.</p></div><div class="theory-card"><strong>Даму деңгейі</strong><p>Құзыреттілік пен дайындық арқылы анықталады.</p></div><div class="theory-card"><strong>Жол-мақсат теориясы</strong><p>Мақсатқа жету жолын түсіндіреді, кедергіні азайтады.</p></div><div class="theory-card"><strong>LMX</strong><p>Лидер мен әр ізбасар арасындағы қатынас сапасын түсіндіреді.</p></div></div><div class="test-box" data-test="northouse-chapter-3-test"><h3>Тест тапсырмалары</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Ситуациялық көшбасшылықтың негізгі идеясы</div></div><div class="options"><label class="option"><input type="radio" name="q3_1" value="A"> Стиль барлық жағдайда өзгермейді</label><label class="option"><input type="radio" name="q3_1" value="B"> Стиль ізбасардың даму деңгейіне бейімделеді</label><label class="option"><input type="radio" name="q3_1" value="C"> Лидерлік харизма арқылы ғана түсіндіріледі</label><label class="option"><input type="radio" name="q3_1" value="D"> Басшылық ресми билікке сүйенеді</label><label class="option"><input type="radio" name="q3_1" value="E"> Топ мәдениеті басты өлшем болады</label></div><div class="explanation">Дұрыс жауап: B. Ситуациялық тәсіл стильді жағдайға бейімдейді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">2</div><div class="q-text">Директивті мінез-құлыққа тән белгі</div></div><div class="options"><label class="option"><input type="radio" name="q3_2" value="A"> Тапсырма, мерзім және нәтиже нақты түсіндіріледі</label><label class="option"><input type="radio" name="q3_2" value="B"> Эмоциялық жағдай бірінші орынға қойылады</label><label class="option"><input type="radio" name="q3_2" value="C"> Шешім толық топқа қалдырылады</label><label class="option"><input type="radio" name="q3_2" value="D"> Бейресми қатынас күшейтіледі</label><label class="option"><input type="radio" name="q3_2" value="E"> Мәдениет арқылы түсіндіріледі</label></div><div class="explanation">Дұрыс жауап: A. Директивті мінез-құлық нақты нұсқаумен байланысты.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">3</div><div class="q-text">Қолдаушы мінез-құлықтың мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q3_3" value="A"> Тапсырма құрылымын қатаң белгілеу</label><label class="option"><input type="radio" name="q3_3" value="B"> Жұмыс мерзімін нақтылау</label><label class="option"><input type="radio" name="q3_3" value="C"> Тыңдау, ынталандыру және сенім қалыптастыру</label><label class="option"><input type="radio" name="q3_3" value="D"> Дайын шешім ұсыну</label><label class="option"><input type="radio" name="q3_3" value="E"> Ресми міндетпен шектеу</label></div><div class="explanation">Дұрыс жауап: C. Қолдаушы мінез-құлық сенім мен қолдауға қатысты.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">4</div><div class="q-text">Ізбасардың даму деңгейі немен анықталады?</div></div><div class="options"><label class="option"><input type="radio" name="q3_4" value="A"> Лидер мәртебесімен</label><label class="option"><input type="radio" name="q3_4" value="B"> Материалдық ресурс көлемімен</label><label class="option"><input type="radio" name="q3_4" value="C"> Сыртқы ортамен байланыспен</label><label class="option"><input type="radio" name="q3_4" value="D"> Құзыреттілік және орындауға дайындықпен</label><label class="option"><input type="radio" name="q3_4" value="E"> Харизмамен</label></div><div class="explanation">Дұрыс жауап: D. Даму деңгейі құзыреттілік пен дайындыққа байланысты.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">5</div><div class="q-text">Стильді бейімдеу нені білдіреді?</div></div><div class="options"><label class="option"><input type="radio" name="q3_5" value="A"> Бір стильді барлық жағдайға қолдану</label><label class="option"><input type="radio" name="q3_5" value="B"> Бағыт беру мен қолдау мөлшерін жағдайға қарай өзгерту</label><label class="option"><input type="radio" name="q3_5" value="C"> Дайындықты елемеу</label><label class="option"><input type="radio" name="q3_5" value="D"> Ресми өкілеттікпен теңестіру</label><label class="option"><input type="radio" name="q3_5" value="E"> Қатынасты тапсырмадан бөлу</label></div><div class="explanation">Дұрыс жауап: B. Стильді бейімдеу жағдайға қарай өзгеруді білдіреді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">6</div><div class="q-text">Жол-мақсат теориясының негізгі идеясы</div></div><div class="options"><label class="option"><input type="radio" name="q3_6" value="A"> Тұрақты қасиетпен түсіндіріледі</label><label class="option"><input type="radio" name="q3_6" value="B"> Ішкі топпен шектеледі</label><label class="option"><input type="radio" name="q3_6" value="C"> Лидер мақсатқа жету жолын түсіндіріп, кедергіні азайтады</label><label class="option"><input type="radio" name="q3_6" value="D"> Стиль лауазымға тәуелді</label><label class="option"><input type="radio" name="q3_6" value="E"> Қатынас харизмамен түсіндіріледі</label></div><div class="explanation">Дұрыс жауап: C. Жол-мақсат теориясы мақсатқа жету жолын ашады.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">7</div><div class="q-text">Жол-мақсат теориясындағы мінез-құлықтар</div></div><div class="options"><label class="option"><input type="radio" name="q3_7" value="A"> Қасиеттік, техникалық, концептуалдық</label><label class="option"><input type="radio" name="q3_7" value="B"> Ішкі топтық, сыртқы топтық</label><label class="option"><input type="radio" name="q3_7" value="C"> Гендерлік, мәдениаралық</label><label class="option"><input type="radio" name="q3_7" value="D"> Харизмалық, қызмет етуші</label><label class="option"><input type="radio" name="q3_7" value="E"> Директивті, қолдаушы, қатыстырушы, жетістікке бағытталған</label></div><div class="explanation">Дұрыс жауап: E. Бұл теория төрт лидер мінез-құлқын көрсетеді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">8</div><div class="q-text">Қатыстырушы көшбасшылыққа тән белгі</div></div><div class="options"><label class="option"><input type="radio" name="q3_8" value="A"> Ізбасар пікірін тыңдап, шешімге қатыстыру</label><label class="option"><input type="radio" name="q3_8" value="B"> Шешімді талқыламай бекіту</label><label class="option"><input type="radio" name="q3_8" value="C"> Әр қадамды нұсқаумен шектеу</label><label class="option"><input type="radio" name="q3_8" value="D"> Қатынасты міндетпен шектеу</label><label class="option"><input type="radio" name="q3_8" value="E"> Жеке ықпалды жоғары қою</label></div><div class="explanation">Дұрыс жауап: A. Қатыстырушы көшбасшылық пікірді ескереді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">9</div><div class="q-text">Жетістікке бағытталған көшбасшылық</div></div><div class="options"><label class="option"><input type="radio" name="q3_9" value="A"> Төмен стандарт қою</label><label class="option"><input type="radio" name="q3_9" value="B"> Мақсатты жеке қатынаспен алмастыру</label><label class="option"><input type="radio" name="q3_9" value="C"> Жоғары стандарт қойып, күрделі мақсатқа ынталандыру</label><label class="option"><input type="radio" name="q3_9" value="D"> Шешімді сыртқы топқа беру</label><label class="option"><input type="radio" name="q3_9" value="E"> Қатынасты келісімшартпен шектеу</label></div><div class="explanation">Дұрыс жауап: C. Жетістікке бағытталған лидер жоғары стандарт қояды.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">10</div><div class="q-text">LMX тәсілінің негізгі мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q3_10" value="A"> Барлығына бір стиль қолдану</label><label class="option"><input type="radio" name="q3_10" value="B"> Лидер мен әр ізбасар арасындағы қатынас сапасын қарастыру</label><label class="option"><input type="radio" name="q3_10" value="C"> Техникалық дағдымен түсіндіру</label><label class="option"><input type="radio" name="q3_10" value="D"> Сыртқы ортаға тәуелді ету</label><label class="option"><input type="radio" name="q3_10" value="E"> Харизманы негізгі өлшем ету</label></div><div class="explanation">Дұрыс жауап: B. LMX қатынас сапасын қарастырады.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">11</div><div class="q-text">Жоғары сапалы LMX белгісі</div></div><div class="options"><label class="option"><input type="radio" name="q3_11" value="A"> Сенім, құрмет және өзара міндеттеме</label><label class="option"><input type="radio" name="q3_11" value="B"> Ресми рөлмен шектелу</label><label class="option"><input type="radio" name="q3_11" value="C"> Келісімшарт шеңберінде қалу</label><label class="option"><input type="radio" name="q3_11" value="D"> Пікірді ескермеу</label><label class="option"><input type="radio" name="q3_11" value="E"> Қысқа міндетпен шектеу</label></div><div class="explanation">Дұрыс жауап: A. Жоғары сапалы LMX сенімге негізделеді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">12</div><div class="q-text">Төмен сапалы LMX сипаттамасы</div></div><div class="options"><label class="option"><input type="radio" name="q3_12" value="A"> Жоғары сенім мен қолдау</label><label class="option"><input type="radio" name="q3_12" value="B"> Шешімге кең қатысу</label><label class="option"><input type="radio" name="q3_12" value="C"> Ресми рөл және келісімшарттық міндет деңгейінде қалу</label><label class="option"><input type="radio" name="q3_12" value="D"> Кеңейтілген қолдау</label><label class="option"><input type="radio" name="q3_12" value="E"> Жоғары құрмет</label></div><div class="explanation">Дұрыс жауап: C. Төмен сапалы LMX ресми рөлмен шектеледі.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-3-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-3-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<section class="section" id="chapter-4"><div class="content-block"><div class="section-kicker">4-бөлім · Трансформациялық және қызмет етуші көшбасшылық</div><h3>Трансформациялық, шынайы, қызмет етуші және бейімделгіш көшбасшылық</h3><p>Бұл бөлім өзгеріске бағытталған, шынайы, қызмет етуші және бейімделгіш көшбасшылықты ашады.</p><div class="note">Лидер адамдарды өзгеріске, дамуға, сенімге және күрделі жағдайға бейімделуге жетелейді.</div><div class="theory-grid"><div class="theory-card"><strong>Трансформациялық</strong><p>Шабыттандыру, өзгеріс және жоғары мақсат.</p></div><div class="theory-card"><strong>Харизма</strong><p>Сенім, тартымдылық және күшті ықпал.</p></div><div class="theory-card"><strong>Идеалдандырылған ықпал</strong><p>Үлгі болу, сенім және құрмет.</p></div><div class="theory-card"><strong>Шабыттандырушы мотивация</strong><p>Ортақ мақсатты айқын айту.</p></div><div class="theory-card"><strong>Интеллектуалдық ынталандыру</strong><p>Жаңа ойлау және шығармашылық шешім.</p></div><div class="theory-card"><strong>Жеке көңіл бөлу</strong><p>Әр ізбасардың дамуына назар аудару.</p></div><div class="theory-card"><strong>Шынайы көшбасшылық</strong><p>Өзін тану, ашықтық, құндылық.</p></div><div class="theory-card"><strong>Қызмет етуші</strong><p>Ізбасарлардың дамуына қызмет ету.</p></div><div class="theory-card"><strong>Бейімделгіш</strong><p>Күрделі өзгеріске бейімделуге көмектесу.</p></div></div><div class="test-box" data-test="northouse-chapter-4-test"><h3>Тест тапсырмалары</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Трансформациялық көшбасшылық мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q4_1" value="A"> Тапсырманы ережемен реттейді</label><label class="option"><input type="radio" name="q4_1" value="B"> Ізбасарларды өзгеріс пен жоғары мақсатқа шабыттандырады</label><label class="option"><input type="radio" name="q4_1" value="C"> Ресми өкілеттікпен түсіндіріледі</label><label class="option"><input type="radio" name="q4_1" value="D"> Қатынас келісімшартта қалады</label><label class="option"><input type="radio" name="q4_1" value="E"> Стиль пікірге тәуелсіз болады</label></div><div class="explanation">Дұрыс жауап: B. Трансформациялық лидер өзгеріске шабыттандырады.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">2</div><div class="q-text">Харизмалық көшбасшылық белгісі</div></div><div class="options"><label class="option"><input type="radio" name="q4_2" value="A"> Ықпал нұсқаулықпен шектеледі</label><label class="option"><input type="radio" name="q4_2" value="B"> Шешім бөлек қабылданады</label><label class="option"><input type="radio" name="q4_2" value="C"> Сенім мен тартымдылық арқылы жұмылдырады</label><label class="option"><input type="radio" name="q4_2" value="D"> Техникалық дағдыға сүйенеді</label><label class="option"><input type="radio" name="q4_2" value="E"> Қатынас сапасы ескерілмейді</label></div><div class="explanation">Дұрыс жауап: C. Харизма сенім мен тартымдылық арқылы әсер етеді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">3</div><div class="q-text">Идеалдандырылған ықпал нені білдіреді?</div></div><div class="options"><label class="option"><input type="radio" name="q4_3" value="A"> Лидер үлгі көрсетіп, сенім мен құрмет қалыптастырады</label><label class="option"><input type="radio" name="q4_3" value="B"> Тапсырма мерзімін ғана нақтылайды</label><label class="option"><input type="radio" name="q4_3" value="C"> Пікірді шешімнен бөледі</label><label class="option"><input type="radio" name="q4_3" value="D"> Қатынасты келісімшартпен шектейді</label><label class="option"><input type="radio" name="q4_3" value="E"> Мәдениетті алмастырады</label></div><div class="explanation">Дұрыс жауап: A. Идеалдандырылған ықпал лидердің үлгі болуымен байланысты.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">4</div><div class="q-text">Шабыттандырушы мотивация әрекеті</div></div><div class="options"><label class="option"><input type="radio" name="q4_4" value="A"> Ресми рөлмен шектеу</label><label class="option"><input type="radio" name="q4_4" value="B"> Дайын нұсқау беру</label><label class="option"><input type="radio" name="q4_4" value="C"> Дамуды елемеу</label><label class="option"><input type="radio" name="q4_4" value="D"> Ортақ мақсатты айқын айтып, жігерлендіру</label><label class="option"><input type="radio" name="q4_4" value="E"> Сыртқы топ ретінде қарастыру</label></div><div class="explanation">Дұрыс жауап: D. Шабыттандырушы мотивация мақсатты айқын көрсетеді.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">5</div><div class="q-text">Интеллектуалдық ынталандыру мақсаты</div></div><div class="options"><label class="option"><input type="radio" name="q4_5" value="A"> Бұрынғы шешімді қайталау</label><label class="option"><input type="radio" name="q4_5" value="B"> Жаңа ойлау мен шығармашылық шешімді қолдау</label><label class="option"><input type="radio" name="q4_5" value="C"> Шешімнен алыстату</label><label class="option"><input type="radio" name="q4_5" value="D"> Ресми міндетпен шектеу</label><label class="option"><input type="radio" name="q4_5" value="E"> Талдаудан бас тарту</label></div><div class="explanation">Дұрыс жауап: B. Интеллектуалдық ынталандыру жаңа ойлауды қолдайды.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">6</div><div class="q-text">Жеке көңіл бөлу мәні</div></div><div class="options"><label class="option"><input type="radio" name="q4_6" value="A"> Бірдей ресми нұсқау беру</label><label class="option"><input type="radio" name="q4_6" value="B"> Келісімшарт деңгейінде қалдыру</label><label class="option"><input type="radio" name="q4_6" value="C"> Әр ізбасардың дамуы мен қажеттілігіне назар аудару</label><label class="option"><input type="radio" name="q4_6" value="D"> Ықпалды бақылаумен түсіндіру</label><label class="option"><input type="radio" name="q4_6" value="E"> Мақсатты беделмен алмастыру</label></div><div class="explanation">Дұрыс жауап: C. Жеке көңіл бөлу ізбасар дамуына бағытталады.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">7</div><div class="q-text">Шынайы көшбасшылық белгісі</div></div><div class="options"><label class="option"><input type="radio" name="q4_7" value="A"> Өзін тану, ашықтық және құндылыққа сүйену</label><label class="option"><input type="radio" name="q4_7" value="B"> Пікірді толық шектеу</label><label class="option"><input type="radio" name="q4_7" value="C"> Қатынасты бақылаумен алмастыру</label><label class="option"><input type="radio" name="q4_7" value="D"> Сыртқы мәртебемен өлшеу</label><label class="option"><input type="radio" name="q4_7" value="E"> Команданы ресми топқа бөлу</label></div><div class="explanation">Дұрыс жауап: A. Шынайы лидер құндылыққа сүйенеді.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">8</div><div class="q-text">Қызмет етуші көшбасшылық бағыты</div></div><div class="options"><label class="option"><input type="radio" name="q4_8" value="A"> Жеке беделді күшейту</label><label class="option"><input type="radio" name="q4_8" value="B"> Ресми өкілеттікпен шектеу</label><label class="option"><input type="radio" name="q4_8" value="C"> Бақылау арқылы басқару</label><label class="option"><input type="radio" name="q4_8" value="D"> Ізбасарлардың дамуы мен қажеттілігіне қызмет ету</label><label class="option"><input type="radio" name="q4_8" value="E"> Тапсырманы қатынастан бөлу</label></div><div class="explanation">Дұрыс жауап: D. Қызмет етуші көшбасшылық ізбасар дамуын бірінші қояды.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">9</div><div class="q-text">Бейімделгіш көшбасшылық мәні</div></div><div class="options"><label class="option"><input type="radio" name="q4_9" value="A"> Бір стильді сақтау</label><label class="option"><input type="radio" name="q4_9" value="B"> Күрделі өзгеріске бейімделуге көмектесу</label><label class="option"><input type="radio" name="q4_9" value="C"> Топты міндетпен шектеу</label><label class="option"><input type="radio" name="q4_9" value="D"> Техникалық дағдымен шектеу</label><label class="option"><input type="radio" name="q4_9" value="E"> Даму деңгейін елемеу</label></div><div class="explanation">Дұрыс жауап: B. Бейімделгіш лидер өзгеріске көмектеседі.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">10</div><div class="q-text">Трансформациялық компоненттер қатары</div></div><div class="options"><label class="option"><input type="radio" name="q4_10" value="A"> Директивті, қолдаушы, қатыстырушы</label><label class="option"><input type="radio" name="q4_10" value="B"> Техникалық, адамдармен жұмыс, концептуалдық</label><label class="option"><input type="radio" name="q4_10" value="C"> Ішкі топ, сыртқы топ, келісімшарт</label><label class="option"><input type="radio" name="q4_10" value="D"> Құзыреттілік, міндеттеме, дайындық</label><label class="option"><input type="radio" name="q4_10" value="E"> Идеалдандырылған ықпал, шабыт, интеллектуалдық ынталандыру, жеке көңіл бөлу</label></div><div class="explanation">Дұрыс жауап: E. Трансформациялық көшбасшылық төрт компонентпен түсіндіріледі.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-4-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-4-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<section class="section" id="chapter-5"><div class="content-block"><div class="section-kicker">5-бөлім · Ізбасарлық, этика, команда және мәдениет</div><h3>Ізбасарлық, этика, команда, гендер және мәдениет</h3><p>Бұл бөлім ізбасарлық, этикалық көшбасшылық, командалық көшбасшылық, гендер және мәдениет тақырыптарын ашады.</p><div class="note">Көшбасшылыққа ізбасарлар, этика, командадағы қатынас, мәдени орта және тең мүмкіндік әсер етеді.</div><div class="theory-grid"><div class="theory-card"><strong>Ізбасарлық</strong><p>Ізбасарлар лидерлік процесінің белсенді қатысушысы.</p></div><div class="theory-card"><strong>Ізбасар рөлі</strong><p>Лидер ықпалына жауап береді және нәтижеге әсер етеді.</p></div><div class="theory-card"><strong>Этикалық көшбасшылық</strong><p>Әділдік, адалдық, жауапкершілік, құрмет.</p></div><div class="theory-card"><strong>Моральдық шешім</strong><p>Лидер шешімі адамдар мен қоғамға әсер етеді.</p></div><div class="theory-card"><strong>Командалық көшбасшылық</strong><p>Топ мақсатын және нәтижені үйлестіреді.</p></div><div class="theory-card"><strong>Команда тиімділігі</strong><p>Мақсат, сенім, рөл анықтығы және байланыс.</p></div><div class="theory-card"><strong>Гендер</strong><p>Тең мүмкіндік, стереотип және кедергілер.</p></div><div class="theory-card"><strong>Мәдениет</strong><p>Лидерлік стилі мен ізбасар күтіміне әсер етеді.</p></div><div class="theory-card"><strong>Мәдениаралық көшбасшылық</strong><p>Әртүрлі құндылық пен норманы ескереді.</p></div></div><div class="test-box" data-test="northouse-chapter-5-test"><h3>Тест тапсырмалары</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Ізбасарлық ұғымының негізгі мазмұны</div></div><div class="options"><label class="option"><input type="radio" name="q5_1" value="A"> Ізбасарлар процестен тыс қалады</label><label class="option"><input type="radio" name="q5_1" value="B"> Ізбасарлар лидерлік процесінің белсенді қатысушысы болады</label><label class="option"><input type="radio" name="q5_1" value="C"> Ресми бақылау құралы ретінде қаралады</label><label class="option"><input type="radio" name="q5_1" value="D"> Топ мақсатына әсер етпейді</label><label class="option"><input type="radio" name="q5_1" value="E"> Келісімшарттық міндетпен шектеледі</label></div><div class="explanation">Дұрыс жауап: B. Ізбасарлар белсенді қатысушы ретінде қарастырылады.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">2</div><div class="q-text">Ізбасардың рөлі</div></div><div class="options"><label class="option"><input type="radio" name="q5_2" value="A"> Лидер ықпалына жауап беріп, топ нәтижесіне әсер ету</label><label class="option"><input type="radio" name="q5_2" value="B"> Мақсаттан тыс бақылаушы болу</label><label class="option"><input type="radio" name="q5_2" value="C"> Шешімге қатыспау</label><label class="option"><input type="radio" name="q5_2" value="D"> Өзара әрекетті тоқтату</label><label class="option"><input type="radio" name="q5_2" value="E"> Ықпалды құжатпен алмастыру</label></div><div class="explanation">Дұрыс жауап: A. Ізбасар ықпалға жауап береді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">3</div><div class="q-text">Этикалық көшбасшылық белгісі</div></div><div class="options"><label class="option"><input type="radio" name="q5_3" value="A"> Жеке беделді жоғары қою</label><label class="option"><input type="radio" name="q5_3" value="B"> Пікірді шешімнен бөлу</label><label class="option"><input type="radio" name="q5_3" value="C"> Әділдік, адалдық және жауапкершілікке сүйену</label><label class="option"><input type="radio" name="q5_3" value="D"> Қатынасты бақылаумен алмастыру</label><label class="option"><input type="radio" name="q5_3" value="E"> Харизмамен ғана түсіндіру</label></div><div class="explanation">Дұрыс жауап: C. Этикалық лидер әділдік пен жауапкершілікке сүйенеді.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">4</div><div class="q-text">Лидер шешімі неге этикалық бағаланады?</div></div><div class="options"><label class="option"><input type="radio" name="q5_4" value="A"> Тапсырма мерзімін белгілейді</label><label class="option"><input type="radio" name="q5_4" value="B"> Өкілеттікті күшейтеді</label><label class="option"><input type="radio" name="q5_4" value="C"> Есеп тәртібімен шектеледі</label><label class="option"><input type="radio" name="q5_4" value="D"> Топқа, ізбасарларға және қоғамға әсер етеді</label><label class="option"><input type="radio" name="q5_4" value="E"> Мәдени айырмашылықты жояды</label></div><div class="explanation">Дұрыс жауап: D. Лидер шешімі адамдарға әсер етеді.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">5</div><div class="q-text">Командалық көшбасшылық бағыты</div></div><div class="options"><label class="option"><input type="radio" name="q5_5" value="A"> Жеке орындаушыларға бөлу</label><label class="option"><input type="radio" name="q5_5" value="B"> Топ мақсатын, өзара әрекетті және нәтижені үйлестіру</label><label class="option"><input type="radio" name="q5_5" value="C"> Келісімшартпен шектеу</label><label class="option"><input type="radio" name="q5_5" value="D"> Сыртқы бақылаумен алмастыру</label><label class="option"><input type="radio" name="q5_5" value="E"> Беделді мақсаттан бөлу</label></div><div class="explanation">Дұрыс жауап: B. Командалық көшбасшылық топ әрекетін үйлестіреді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">6</div><div class="q-text">Команда тиімділігіне әсер ететін фактор</div></div><div class="options"><label class="option"><input type="radio" name="q5_6" value="A"> Ортақ мақсат, сенім және рөлдердің анықтығы</label><label class="option"><input type="radio" name="q5_6" value="B"> Пікірді шешімнен бөлу</label><label class="option"><input type="radio" name="q5_6" value="C"> Сыртқы топқа жатқызу</label><label class="option"><input type="radio" name="q5_6" value="D"> Техникалық дағдымен шектеу</label><label class="option"><input type="radio" name="q5_6" value="E"> Байланысты құжатпен алмастыру</label></div><div class="explanation">Дұрыс жауап: A. Тиімділік мақсат, сенім және рөл анықтығына байланысты.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">7</div><div class="q-text">Гендер және көшбасшылық тақырыбы нені ашады?</div></div><div class="options"><label class="option"><input type="radio" name="q5_7" value="A"> Лауазыммен ғана өлшейді</label><label class="option"><input type="radio" name="q5_7" value="B"> Нәтижені сыртқы ортамен алмастырады</label><label class="option"><input type="radio" name="q5_7" value="C"> Тең мүмкіндік, стереотип және кедергілер мәселесін қарастырады</label><label class="option"><input type="radio" name="q5_7" value="D"> Келісімшартпен шектейді</label><label class="option"><input type="radio" name="q5_7" value="E"> Харизмамен түсіндіреді</label></div><div class="explanation">Дұрыс жауап: C. Гендер тақырыбы теңдік пен кедергілерді ашады.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">8</div><div class="q-text">Мәдениет көшбасшылыққа қалай әсер етеді?</div></div><div class="options"><label class="option"><input type="radio" name="q5_8" value="A"> Ықпалды толық жояды</label><label class="option"><input type="radio" name="q5_8" value="B"> Мақсаттан бөледі</label><label class="option"><input type="radio" name="q5_8" value="C"> Бақылаумен алмастырады</label><label class="option"><input type="radio" name="q5_8" value="D"> Лидерлік стиліне және ізбасар күтіміне әсер етеді</label><label class="option"><input type="radio" name="q5_8" value="E"> Техникалық әрекетке айналдырады</label></div><div class="explanation">Дұрыс жауап: D. Мәдениет стиль мен күтімге әсер етеді.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">9</div><div class="q-text">Мәдениаралық көшбасшылықта лидер нені ескеруі керек?</div></div><div class="options"><label class="option"><input type="radio" name="q5_9" value="A"> Барлық мәдениетке бір стиль қолдану</label><label class="option"><input type="radio" name="q5_9" value="B"> Әртүрлі құндылық, норма және қарым-қатынас үлгілері</label><label class="option"><input type="radio" name="q5_9" value="C"> Пікірді шешімнен бөлу</label><label class="option"><input type="radio" name="q5_9" value="D"> Ықпалды құжатпен шектеу</label><label class="option"><input type="radio" name="q5_9" value="E"> Мәдени айырмашылықты елемеу</label></div><div class="explanation">Дұрыс жауап: B. Мәдениаралық ортада айырмашылықтар ескеріледі.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">10</div><div class="q-text">Бұл бөлімнің ортақ идеясы</div></div><div class="options"><label class="option"><input type="radio" name="q5_10" value="A"> Көшбасшылық ресми мәртебемен ғана түсіндіріледі</label><label class="option"><input type="radio" name="q5_10" value="B"> Нәтиже ізбасарға тәуелсіз</label><label class="option"><input type="radio" name="q5_10" value="C"> Этика бөлек қаралады</label><label class="option"><input type="radio" name="q5_10" value="D"> Мәдениет әсер етпейді</label><label class="option"><input type="radio" name="q5_10" value="E"> Көшбасшылық ізбасарлар, этика, команда және мәдениетпен байланысты</label></div><div class="explanation">Дұрыс жауап: E. Нортхаус көшбасшылықты кең әлеуметтік процесс ретінде түсіндіреді.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-5-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-5-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<section class="section" id="chapter-6"><div class="content-block"><div class="section-kicker">6-бөлім · Қорытынды тест</div><h3>Нортхаус бойынша көшбасшылық теорияларын қайталау</h3><p>Бұл қорытынды тест негізгі көшбасшылық теорияларын қысқа қайталауға арналған.</p><div class="test-box" data-test="northouse-chapter-6-test"><h3>Қорытынды тест</h3><p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p><div class="question" data-answer="B"><div class="question-title"><div class="q-num">1</div><div class="q-text">Нортхаус бойынша көшбасшылықтың басты өзегі</div></div><div class="options"><label class="option"><input type="radio" name="q6_1" value="A"> Қаржылық бақылау</label><label class="option"><input type="radio" name="q6_1" value="B"> Ықпал ету процесі</label><label class="option"><input type="radio" name="q6_1" value="C"> Өндірістік жоспар</label><label class="option"><input type="radio" name="q6_1" value="D"> Құжат айналымы</label><label class="option"><input type="radio" name="q6_1" value="E"> Материалдық ресурс</label></div><div class="explanation">Дұрыс жауап: B. Көшбасшылықтың өзегі — ықпал ету.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">2</div><div class="q-text">Көшбасшылықтың негізгі элементтері</div></div><div class="options"><label class="option"><input type="radio" name="q6_2" value="A"> Бюджет, баланс, шығын</label><label class="option"><input type="radio" name="q6_2" value="B"> Қойма, өндіріс, жеткізу</label><label class="option"><input type="radio" name="q6_2" value="C"> Ереже, есеп, бақылау</label><label class="option"><input type="radio" name="q6_2" value="D"> Процесс, ықпал, топ, ортақ мақсат</label><label class="option"><input type="radio" name="q6_2" value="E"> Жалақы, лауазым, құжат</label></div><div class="explanation">Дұрыс жауап: D. Негізгі элементтер — процесс, ықпал, топ, мақсат.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">3</div><div class="q-text">Қасиеттер тәсілі нені түсіндіреді?</div></div><div class="options"><label class="option"><input type="radio" name="q6_3" value="A"> Лидерлікке ықпал ететін жеке сипаттарды</label><label class="option"><input type="radio" name="q6_3" value="B"> Лидер мен мүше алмасуын</label><label class="option"><input type="radio" name="q6_3" value="C"> Мәдениаралық айырмашылықты</label><label class="option"><input type="radio" name="q6_3" value="D"> Топтық шешім алгоритмін</label><label class="option"><input type="radio" name="q6_3" value="E"> Қаржылық есеп жүйесін</label></div><div class="explanation">Дұрыс жауап: A. Қасиеттер тәсілі жеке сипаттарды қарайды.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">4</div><div class="q-text">Дағдылар тәсіліндегі негізгі дағдылар</div></div><div class="options"><label class="option"><input type="radio" name="q6_4" value="A"> Ресми, әкімшілік, бақылау</label><label class="option"><input type="radio" name="q6_4" value="B"> Қоймалық, өндірістік, қаржылық</label><label class="option"><input type="radio" name="q6_4" value="C"> Гендерлік, мәдени, сыртқы</label><label class="option"><input type="radio" name="q6_4" value="D"> Харизмалық, шынайы, этикалық</label><label class="option"><input type="radio" name="q6_4" value="E"> Техникалық, адамдармен жұмыс, концептуалдық</label></div><div class="explanation">Дұрыс жауап: E. Дағдылар үш негізгі топқа бөлінеді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">5</div><div class="q-text">Мінез-құлық тәсілі нені талдайды?</div></div><div class="options"><label class="option"><input type="radio" name="q6_5" value="A"> Лидердің туған қасиетін</label><label class="option"><input type="radio" name="q6_5" value="B"> Ұйымның қаржы балансын</label><label class="option"><input type="radio" name="q6_5" value="C"> Лидердің топпен жұмыс кезіндегі әрекетін</label><label class="option"><input type="radio" name="q6_5" value="D"> Мәдени нормалардың тарихын</label><label class="option"><input type="radio" name="q6_5" value="E"> Ресми құжат құрылымын</label></div><div class="explanation">Дұрыс жауап: C. Мінез-құлық тәсілі әрекетті талдайды.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">6</div><div class="q-text">Ситуациялық көшбасшылық қағидасы</div></div><div class="options"><label class="option"><input type="radio" name="q6_6" value="A"> Барлық жағдайда бір стиль қолдану</label><label class="option"><input type="radio" name="q6_6" value="B"> Стильді ізбасардың даму деңгейіне бейімдеу</label><label class="option"><input type="radio" name="q6_6" value="C"> Шешімді ізбасардан бөлек қабылдау</label><label class="option"><input type="radio" name="q6_6" value="D"> Лауазыммен шектеу</label><label class="option"><input type="radio" name="q6_6" value="E"> Мәдениетті негізгі өлшем ету</label></div><div class="explanation">Дұрыс жауап: B. Ситуациялық стиль бейімделуді талап етеді.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">7</div><div class="q-text">Жол-мақсат теориясында лидердің рөлі</div></div><div class="options"><label class="option"><input type="radio" name="q6_7" value="A"> Қатынасты келісімшартпен шектеу</label><label class="option"><input type="radio" name="q6_7" value="B"> Топты ішкі және сыртқы топқа бөлу</label><label class="option"><input type="radio" name="q6_7" value="C"> Лидерлікті туған қасиетпен түсіндіру</label><label class="option"><input type="radio" name="q6_7" value="D"> Мақсатқа жету жолын айқындау және кедергіні азайту</label><label class="option"><input type="radio" name="q6_7" value="E"> Мәдени айырмашылықты талдау</label></div><div class="explanation">Дұрыс жауап: D. Жол-мақсат теориясы жолды анықтайды.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">8</div><div class="q-text">LMX тәсілінің негізгі өлшемі</div></div><div class="options"><label class="option"><input type="radio" name="q6_8" value="A"> Лидер мен әр ізбасар арасындағы қатынас сапасы</label><label class="option"><input type="radio" name="q6_8" value="B"> Техникалық білім деңгейі</label><label class="option"><input type="radio" name="q6_8" value="C"> Өндірістік стандарт</label><label class="option"><input type="radio" name="q6_8" value="D"> Қаржылық жоспар</label><label class="option"><input type="radio" name="q6_8" value="E"> Гендерлік стереотиптер</label></div><div class="explanation">Дұрыс жауап: A. LMX қатынас сапасын өлшем етеді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">9</div><div class="q-text">Трансформациялық көшбасшылықтың мәні</div></div><div class="options"><label class="option"><input type="radio" name="q6_9" value="A"> Келісімшартпен шектеу</label><label class="option"><input type="radio" name="q6_9" value="B"> Ережемен ғана беру</label><label class="option"><input type="radio" name="q6_9" value="C"> Ізбасарларды шабыттандыру және өзгеріске бағыттау</label><label class="option"><input type="radio" name="q6_9" value="D"> Пікірді шешімнен бөлу</label><label class="option"><input type="radio" name="q6_9" value="E"> Мәдениетті ескермеу</label></div><div class="explanation">Дұрыс жауап: C. Трансформациялық лидер шабыттандырады.</div></div><div class="question" data-answer="B"><div class="question-title"><div class="q-num">10</div><div class="q-text">Қызмет етуші көшбасшылық бағыты</div></div><div class="options"><label class="option"><input type="radio" name="q6_10" value="A"> Жеке беделді күшейту</label><label class="option"><input type="radio" name="q6_10" value="B"> Ізбасарлардың дамуы мен қажеттілігіне қызмет ету</label><label class="option"><input type="radio" name="q6_10" value="C"> Қатынасты бақылаумен алмастыру</label><label class="option"><input type="radio" name="q6_10" value="D"> Топты міндетпен шектеу</label><label class="option"><input type="radio" name="q6_10" value="E"> Техникалық дағдымен шектеу</label></div><div class="explanation">Дұрыс жауап: B. Қызмет етуші лидер ізбасарға қызмет етеді.</div></div><div class="question" data-answer="D"><div class="question-title"><div class="q-num">11</div><div class="q-text">Этикалық көшбасшылық қағидасы</div></div><div class="options"><label class="option"><input type="radio" name="q6_11" value="A"> Жеке беделді жоғары қою</label><label class="option"><input type="radio" name="q6_11" value="B"> Пікірді шешімнен бөлу</label><label class="option"><input type="radio" name="q6_11" value="C"> Қатынасты актімен алмастыру</label><label class="option"><input type="radio" name="q6_11" value="D"> Әділдік, адалдық және адамды құрметтеу</label><label class="option"><input type="radio" name="q6_11" value="E"> Харизмамен шектеу</label></div><div class="explanation">Дұрыс жауап: D. Этикалық лидер әділдік пен құрметке сүйенеді.</div></div><div class="question" data-answer="A"><div class="question-title"><div class="q-num">12</div><div class="q-text">Командалық көшбасшылық мақсаты</div></div><div class="options"><label class="option"><input type="radio" name="q6_12" value="A"> Топ мақсаты, өзара әрекет және нәтижені үйлестіру</label><label class="option"><input type="radio" name="q6_12" value="B"> Сыртқы бақылаушы ету</label><label class="option"><input type="radio" name="q6_12" value="C"> Мақсатты беделмен алмастыру</label><label class="option"><input type="radio" name="q6_12" value="D"> Келісімшартпен шектеу</label><label class="option"><input type="radio" name="q6_12" value="E"> Ізбасар рөлін елемеу</label></div><div class="explanation">Дұрыс жауап: A. Командалық лидер топ әрекетін үйлестіреді.</div></div><div class="question" data-answer="C"><div class="question-title"><div class="q-num">13</div><div class="q-text">Мәдениет көшбасшылыққа қалай әсер етеді?</div></div><div class="options"><label class="option"><input type="radio" name="q6_13" value="A"> Ықпалды толық жояды</label><label class="option"><input type="radio" name="q6_13" value="B"> Мақсаттан бөледі</label><label class="option"><input type="radio" name="q6_13" value="C"> Лидерлік стиліне және ізбасар күтіміне әсер етеді</label><label class="option"><input type="radio" name="q6_13" value="D"> Құжатпен алмастырады</label><label class="option"><input type="radio" name="q6_13" value="E"> Қаржымен шектейді</label></div><div class="explanation">Дұрыс жауап: C. Мәдениет лидерлік стиліне әсер етеді.</div></div><div class="question" data-answer="E"><div class="question-title"><div class="q-num">14</div><div class="q-text">Нортхаус еңбегіндегі зерттеу бағыты</div></div><div class="options"><label class="option"><input type="radio" name="q6_14" value="A"> Қаржы, қойма, өндіріс</label><label class="option"><input type="radio" name="q6_14" value="B"> Баланс, капитал, берешек</label><label class="option"><input type="radio" name="q6_14" value="C"> Логистика, жабдықтау</label><label class="option"><input type="radio" name="q6_14" value="D"> Бюджет, есеп, бақылау</label><label class="option"><input type="radio" name="q6_14" value="E"> Қасиет, дағды, жағдай, ықпал, этика және мәдениет</label></div><div class="explanation">Дұрыс жауап: E. Нортхаус көшбасшылықты әртүрлі теориялық тәсіл арқылы зерттейді.</div></div><button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-6-test')">Нәтижені көрсету</button><div class="result-panel" id="result-northouse-chapter-6-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div></div></div></section>
-<footer class="content-block" style="margin-top:30px;"><div class="section-kicker">Сайт аяқталды</div><h3>Питер Г. Нортхаус · Көшбасшылық: теория және практика</h3><p>Бұл сайт Нортхаус еңбегінің негізгі көшбасшылық теориялары бойынша қысқа дайындалды. Материал КТ тақырыптарына сай: билік, ықпал ету, көшбасшылық негіздері, басшылық стильдері, этика, команда және мәдениет бағыттары арқылы жүйеленді.</p><p>Әр сұрақта 5 жауап нұсқасы бар және бір ғана дұрыс жауап таңдалады. “Нәтижені көрсету” батырмасын басқаннан кейін дұрыс жауап жасыл түспен, қате таңдалған жауап қызыл түспен көрсетіледі.</p><p style="margin-bottom:0;color:var(--muted);">© @elnazm_ln</p></footer></div><a class="floating-up" href="#top">↑</a><script>
-function getSelectedAnswer(q){const s=q.querySelector('input[type="radio"]:checked');return s?s.value.trim():''}
-function checkSection(testId){const testBox=document.querySelector(`[data-test="${testId}"]`);const resultPanel=document.getElementById(`result-${testId}`);if(!testBox||!resultPanel)return;const questions=Array.from(testBox.querySelectorAll('.question'));let correctCount=0;questions.forEach(question=>{const correctAnswer=(question.dataset.answer||'').trim();const selectedAnswer=getSelectedAnswer(question);const options=Array.from(question.querySelectorAll('.option'));question.classList.add('checked');options.forEach(option=>{option.classList.remove('correct','wrong');const input=option.querySelector('input[type="radio"]');if(!input)return;const value=input.value.trim();if(value===correctAnswer)option.classList.add('correct');if(value===selectedAnswer&&value!==correctAnswer)option.classList.add('wrong')});if(selectedAnswer===correctAnswer)correctCount++});const total=questions.length;const percent=total>0?Math.round((correctCount/total)*100):0;const resultText=resultPanel.querySelector('.result-text');if(resultText)resultText.textContent=`${correctCount} / ${total} дұрыс жауап · ${percent}%`;resultPanel.classList.add('show');resultPanel.scrollIntoView({behavior:'smooth',block:'nearest'})}
-document.addEventListener('DOMContentLoaded',()=>{Array.from(document.querySelectorAll('.test-box .btn-primary')).forEach(button=>{const testBox=button.closest('.test-box');if(!testBox)return;const testId=testBox.dataset.test;if(!testId)return;button.addEventListener('click',()=>checkSection(testId))})});
-</script></body></html>
+  <a id="top"></a>
+  <div class="page">
+    <div class="topbar">
+      <div class="brand"><div class="brand-mark">К</div><div class="brand-text">Питер Г. Нортхаус · Көшбасшылық: теория және практика</div></div>
+      <div class="top-actions"><a class="pill" href="#chapters">Бөлімдер</a><a class="pill" href="#chapter-1">Мәні</a><a class="pill" href="#chapter-3">Ситуация</a><a class="pill" href="#chapter-5">Этика</a></div>
+    </div>
+    <header class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Қосымша әдебиет · Нортхаус · КТ форматы</div>
+        <h1>Көшбасшылық: теория және практика</h1>
+        <p>Бұл сайт Питер Г. Нортхаус еңбегі бойынша дайындалды. Материал көшбасшылықтың мәні, қасиет пен дағды тәсілдері, мінез-құлық, ситуациялық көшбасшылық, ықпал ету, трансформациялық көшбасшылық, этика, команда және мәдениет тақырыптары арқылы КТ-ға бейімделіп беріледі.</p>
+        <div class="hero-meta"><span class="hero-chip">Қазақ тілінде</span><span class="hero-chip">5 жауап нұсқасы</span><span class="hero-chip">1 дұрыс жауап</span><span class="hero-chip">Қысқа формат</span></div>
+      </div>
+    </header>
+    <section class="nav-panel" id="chapters">
+      <div class="nav-title"><h2>Ірі бөлімдер</h2><span>Подразделдер жеке көрсетілмейді</span></div>
+      <div class="chapter-grid">
+        <a class="chapter-card" href="#chapter-1"><span class="chapter-num">1</span><strong>Көшбасшылықтың мәні</strong><small>Процесс, ықпал, топ, мақсат</small></a>
+        <a class="chapter-card" href="#chapter-2"><span class="chapter-num">2</span><strong>Қасиеттер, дағдылар, мінез-құлық</strong><small>Trait, skills, behavior</small></a>
+        <a class="chapter-card" href="#chapter-3"><span class="chapter-num">3</span><strong>Ситуациялық, жол-мақсат, LMX</strong><small>Жағдай, мақсат, қатынас</small></a>
+        <a class="chapter-card" href="#chapter-4"><span class="chapter-num">4</span><strong>Трансформациялық көшбасшылық</strong><small>Өзгеріс, харизма, қызмет ету</small></a>
+        <a class="chapter-card" href="#chapter-5"><span class="chapter-num">5</span><strong>Ізбасарлық, этика, мәдениет</strong><small>Followership, team, culture</small></a>
+        <a class="chapter-card" href="#chapter-6"><span class="chapter-num">6</span><strong>Қорытынды тест</strong><small>Негізгі ұғымдарды қайталау</small></a>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-1">
+      <div class="content-block">
+        <div class="section-kicker">1-бөлім · Көшбасшылықтың мәні</div>
+        <h3>Көшбасшылықтың мәні және табиғаты</h3>
+        <p>Бұл бөлімде Нортхаус еңбегіндегі көшбасшылықтың негізгі түсінігі қысқа ашылады: процесс, ықпал ету, топ және ортақ мақсат.</p>
+        <div class="note">КТ тақырыбы: билік, ықпал ету және көшбасшылық негіздері.</div>
+        <div class="theory-grid"><div class="theory-card"><strong>Көшбасшылық</strong><p>Лидер мен ізбасарлар арасындағы ықпал ету процесі.</p></div>
+<div class="theory-card"><strong>Процесс</strong><p>Лидер мен ізбасар өзара әрекет арқылы байланысады.</p></div>
+<div class="theory-card"><strong>Ықпал ету</strong><p>Лидер адамдардың әрекетіне және бағытына әсер етеді.</p></div>
+<div class="theory-card"><strong>Топ</strong><p>Көшбасшылық топ ішінде көрінеді.</p></div>
+<div class="theory-card"><strong>Ортақ мақсат</strong><p>Көшбасшылық адамдарды ортақ мақсатқа бағыттайды.</p></div>
+<div class="theory-card"><strong>Лидер мен ізбасар</strong><p>Екі тараптың байланысы лидерлік процесін құрайды.</p></div></div>
+        <div class="test-box" data-test="northouse-chapter-1-test">
+          <h3>Тест тапсырмалары</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Нортхаус бойынша көшбасшылықтың негізгі мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_1" value="A"> Бақылау процесі</label>
+<label class="option"><input type="radio" name="q1_1" value="B"> Ықпал ету процесі</label>
+<label class="option"><input type="radio" name="q1_1" value="C"> Есеп беру процесі</label>
+<label class="option"><input type="radio" name="q1_1" value="D"> Жоспарлау процесі</label>
+<label class="option"><input type="radio" name="q1_1" value="E"> Өндіріс процесі</label></div>
+            <div class="explanation">Дұрыс жауап: B. Көшбасшылықтың өзегі — ықпал ету.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Көшбасшылық анықтамасындағы басты элемент</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_2" value="A"> Қаржы және есеп</label>
+<label class="option"><input type="radio" name="q1_2" value="B"> Құжат және ереже</label>
+<label class="option"><input type="radio" name="q1_2" value="C"> Қойма және ресурс</label>
+<label class="option"><input type="radio" name="q1_2" value="D"> Топ және ортақ мақсат</label>
+<label class="option"><input type="radio" name="q1_2" value="E"> Жалақы және бақылау</label></div>
+            <div class="explanation">Дұрыс жауап: D. Көшбасшылық топ пен ортақ мақсат арқылы ашылады.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Көшбасшылықты процесс ретінде түсіну</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_3" value="A"> Лауазымды күшейту</label>
+<label class="option"><input type="radio" name="q1_3" value="B"> Ережені бекіту</label>
+<label class="option"><input type="radio" name="q1_3" value="C"> Өзара әрекет жүруі</label>
+<label class="option"><input type="radio" name="q1_3" value="D"> Есепті жаңарту</label>
+<label class="option"><input type="radio" name="q1_3" value="E"> Құжатты толтыру</label></div>
+            <div class="explanation">Дұрыс жауап: C. Процесс лидер мен ізбасар байланысын білдіреді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Ықпал ету лидерлікте нені көрсетеді?</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_4" value="A"> Адам әрекетіне әсер ету</label>
+<label class="option"><input type="radio" name="q1_4" value="B"> Қаржы жоспарын құру</label>
+<label class="option"><input type="radio" name="q1_4" value="C"> Қойма есебін жүргізу</label>
+<label class="option"><input type="radio" name="q1_4" value="D"> Еңбек ақыны бөлу</label>
+<label class="option"><input type="radio" name="q1_4" value="E"> Өндіріс нормасын бекіту</label></div>
+            <div class="explanation">Дұрыс жауап: A. Ықпал ету адамдардың әрекеті мен бағытына әсер етеді.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Көшбасшылықтың топтық сипаты</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_5" value="A"> Жеке есеппен шектеледі</label>
+<label class="option"><input type="radio" name="q1_5" value="B"> Құжат тәртібін сақтайды</label>
+<label class="option"><input type="radio" name="q1_5" value="C"> Материал қорын реттейді</label>
+<label class="option"><input type="radio" name="q1_5" value="D"> Бюджет бөлімін ашады</label>
+<label class="option"><input type="radio" name="q1_5" value="E"> Топ ішінде қалыптасады</label></div>
+            <div class="explanation">Дұрыс жауап: E. Көшбасшылық топ ішінде көрінеді.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Ортақ мақсаттың рөлі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_6" value="A"> Беделді бөлу</label>
+<label class="option"><input type="radio" name="q1_6" value="B"> Бағытты біріктіру</label>
+<label class="option"><input type="radio" name="q1_6" value="C"> Шығынды азайту</label>
+<label class="option"><input type="radio" name="q1_6" value="D"> Құжатты сақтау</label>
+<label class="option"><input type="radio" name="q1_6" value="E"> Есепті жабу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Ортақ мақсат топты бір бағытқа біріктіреді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Лидер мен ізбасар байланысы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_7" value="A"> Лидер есеп береді</label>
+<label class="option"><input type="radio" name="q1_7" value="B"> Ізбасар сыртта қалады</label>
+<label class="option"><input type="radio" name="q1_7" value="C"> Лидер ықпал етеді</label>
+<label class="option"><input type="radio" name="q1_7" value="D"> Топ қатыспайды</label>
+<label class="option"><input type="radio" name="q1_7" value="E"> Билік жойылады</label></div>
+            <div class="explanation">Дұрыс жауап: C. Лидер ықпал етеді, ізбасар жауап береді.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">Лидерлік пен менеджмент айырмасы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_8" value="A"> Екеуі толық бірдей</label>
+<label class="option"><input type="radio" name="q1_8" value="B"> Екеуі есепке сүйенеді</label>
+<label class="option"><input type="radio" name="q1_8" value="C"> Екеуі құжатпен шектеледі</label>
+<label class="option"><input type="radio" name="q1_8" value="D"> Лидерлік ықпалға жақын</label>
+<label class="option"><input type="radio" name="q1_8" value="E"> Менеджмент әсерсіз болады</label></div>
+            <div class="explanation">Дұрыс жауап: D. Лидерлік ықпал етуге жақын.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Көшбасшылық пен билік байланысы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_9" value="A"> Ықпал арқылы байланысады</label>
+<label class="option"><input type="radio" name="q1_9" value="B"> Қойма арқылы өлшенеді</label>
+<label class="option"><input type="radio" name="q1_9" value="C"> Баланс арқылы бекітіледі</label>
+<label class="option"><input type="radio" name="q1_9" value="D"> Ереже арқылы жойылады</label>
+<label class="option"><input type="radio" name="q1_9" value="E"> Бюджет арқылы шектеледі</label></div>
+            <div class="explanation">Дұрыс жауап: A. Көшбасшылық ықпал етумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">Нортхаус қарастыратын тәсілдер</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q1_10" value="A"> Қойма, есеп, ресурс</label>
+<label class="option"><input type="radio" name="q1_10" value="B"> Баға, нарық, өнім</label>
+<label class="option"><input type="radio" name="q1_10" value="C"> Баланс, капитал, қарыз</label>
+<label class="option"><input type="radio" name="q1_10" value="D"> Жабдық, өндіріс, өткізу</label>
+<label class="option"><input type="radio" name="q1_10" value="E"> Қасиет, дағды, жағдай</label></div>
+            <div class="explanation">Дұрыс жауап: E. Нортхаус көшбасшылықты бірнеше тәсілмен түсіндіреді.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-1-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-1-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-2">
+      <div class="content-block">
+        <div class="section-kicker">2-бөлім · Қасиеттер, дағдылар және мінез-құлық</div>
+        <h3>Көшбасшы қасиеттері, дағдылары және мінез-құлық тәсілдері</h3>
+        <p>Бұл бөлімде қасиеттер тәсілі, дағдылар тәсілі және мінез-құлық тәсілі қысқа берілді.</p>
+        <div class="note">КТ тақырыбы: көшбасшылық негіздері және басшылық стильдері.</div>
+        <div class="theory-grid"><div class="theory-card"><strong>Қасиеттер тәсілі</strong><p>Лидерлікке әсер ететін жеке сипаттарды түсіндіреді.</p></div>
+<div class="theory-card"><strong>Негізгі қасиеттер</strong><p>Интеллект, сенімділік, табандылық, адалдық, әлеуметтік қабілет.</p></div>
+<div class="theory-card"><strong>Дағдылар тәсілі</strong><p>Көшбасшылықты дамытуға болатын қабілеттер жүйесі ретінде қарайды.</p></div>
+<div class="theory-card"><strong>Техникалық дағды</strong><p>Кәсіби білім мен әдісті қолдану қабілеті.</p></div>
+<div class="theory-card"><strong>Адамдармен жұмыс</strong><p>Түсіну, ынталандыру және бірлескен әрекет ұйымдастыру.</p></div>
+<div class="theory-card"><strong>Мінез-құлық тәсілі</strong><p>Лидердің топпен қалай әрекет ететінін талдайды.</p></div></div>
+        <div class="test-box" data-test="northouse-chapter-2-test">
+          <h3>Тест тапсырмалары</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Қасиеттер тәсілінің мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_1" value="A"> Жағдайды бағалау</label>
+<label class="option"><input type="radio" name="q2_1" value="B"> Жеке сипаттарды түсіндіру</label>
+<label class="option"><input type="radio" name="q2_1" value="C"> Қатынасты өлшеу</label>
+<label class="option"><input type="radio" name="q2_1" value="D"> Команданы бөлу</label>
+<label class="option"><input type="radio" name="q2_1" value="E"> Мәдениетті талдау</label></div>
+            <div class="explanation">Дұрыс жауап: B. Қасиеттер тәсілі лидердің жеке сипаттарын қарайды.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Лидерлікпен байланысатын қасиет</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_2" value="A"> Интеллект</label>
+<label class="option"><input type="radio" name="q2_2" value="B"> Қойма есебі</label>
+<label class="option"><input type="radio" name="q2_2" value="C"> Бюджет формасы</label>
+<label class="option"><input type="radio" name="q2_2" value="D"> Өнім бағасы</label>
+<label class="option"><input type="radio" name="q2_2" value="E"> Материал қоры</label></div>
+            <div class="explanation">Дұрыс жауап: A. Интеллект лидерлікпен байланысты негізгі қасиеттердің бірі.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Өзіне сенімділік нені күшейтеді?</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_3" value="A"> Құжат айналымын</label>
+<label class="option"><input type="radio" name="q2_3" value="B"> Өндіріс нормасын</label>
+<label class="option"><input type="radio" name="q2_3" value="C"> Қойма көлемін</label>
+<label class="option"><input type="radio" name="q2_3" value="D"> Шешім тұрақтылығын</label>
+<label class="option"><input type="radio" name="q2_3" value="E"> Нарық бағасын</label></div>
+            <div class="explanation">Дұрыс жауап: D. Өзіне сенімділік шешім қабылдауға әсер етеді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Табандылықтың көрінісі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_4" value="A"> Есепті қысқарту</label>
+<label class="option"><input type="radio" name="q2_4" value="B"> Қатынасты тоқтату</label>
+<label class="option"><input type="radio" name="q2_4" value="C"> Мақсатқа ұмтылу</label>
+<label class="option"><input type="radio" name="q2_4" value="D"> Топты бөлу</label>
+<label class="option"><input type="radio" name="q2_4" value="E"> Ережені өзгерту</label></div>
+            <div class="explanation">Дұрыс жауап: C. Табандылық мақсатқа жетуге ұмтылуды білдіреді.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Адалдықтың лидерлік мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_5" value="A"> Өндірісті реттеу</label>
+<label class="option"><input type="radio" name="q2_5" value="B"> Ресурсты бөлу</label>
+<label class="option"><input type="radio" name="q2_5" value="C"> Бақылауды күшейту</label>
+<label class="option"><input type="radio" name="q2_5" value="D"> Құжатты сақтау</label>
+<label class="option"><input type="radio" name="q2_5" value="E"> Сенім қалыптастыру</label></div>
+            <div class="explanation">Дұрыс жауап: E. Адалдық сенімге лайық болумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Әлеуметтік қабілет нені білдіреді?</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_6" value="A"> Қаржы бөлу</label>
+<label class="option"><input type="radio" name="q2_6" value="B"> Адаммен байланысу</label>
+<label class="option"><input type="radio" name="q2_6" value="C"> Қойма санау</label>
+<label class="option"><input type="radio" name="q2_6" value="D"> Жалақы есептеу</label>
+<label class="option"><input type="radio" name="q2_6" value="E"> Баға белгілеу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Әлеуметтік қабілет адамдармен байланыс орнатуға көмектеседі.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Дағдылар тәсілінің ерекшелігі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_7" value="A"> Қабілетті дамытуға болады</label>
+<label class="option"><input type="radio" name="q2_7" value="B"> Қасиет өзгермейді</label>
+<label class="option"><input type="radio" name="q2_7" value="C"> Билік жеткілікті</label>
+<label class="option"><input type="radio" name="q2_7" value="D"> Ереже басты болады</label>
+<label class="option"><input type="radio" name="q2_7" value="E"> Мәдениет шешеді</label></div>
+            <div class="explanation">Дұрыс жауап: A. Дағдылар тәсілі лидерлікті дамитын қабілет ретінде қарайды.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">Негізгі лидерлік дағдылар</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_8" value="A"> Есеп, баланс, шығын</label>
+<label class="option"><input type="radio" name="q2_8" value="B"> Баға, өнім, нарық</label>
+<label class="option"><input type="radio" name="q2_8" value="C"> Қойма, жеткізу, өткізу</label>
+<label class="option"><input type="radio" name="q2_8" value="D"> Ереже, құжат, бақылау</label>
+<label class="option"><input type="radio" name="q2_8" value="E"> Техникалық, адами, концептуалдық</label></div>
+            <div class="explanation">Дұрыс жауап: E. Дағдылар тәсілінде үш негізгі дағды бар.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Техникалық дағды мазмұны</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_9" value="A"> Топқа қолдау беру</label>
+<label class="option"><input type="radio" name="q2_9" value="B"> Ұйымды тұтас көру</label>
+<label class="option"><input type="radio" name="q2_9" value="C"> Кәсіби білім қолдану</label>
+<label class="option"><input type="radio" name="q2_9" value="D"> Мақсатты шабыттандыру</label>
+<label class="option"><input type="radio" name="q2_9" value="E"> Қатынасты дамыту</label></div>
+            <div class="explanation">Дұрыс жауап: C. Техникалық дағды кәсіби білімді қолданумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">Адамдармен жұмыс дағдысы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_10" value="A"> Топты түсіну және ынталандыру</label>
+<label class="option"><input type="radio" name="q2_10" value="B"> Құралмен жұмыс істеу</label>
+<label class="option"><input type="radio" name="q2_10" value="C"> Баланс құрылымын оқу</label>
+<label class="option"><input type="radio" name="q2_10" value="D"> Өндіріс нормасын есептеу</label>
+<label class="option"><input type="radio" name="q2_10" value="E"> Қойма қорын тексеру</label></div>
+            <div class="explanation">Дұрыс жауап: A. Бұл дағды адамдармен жұмыс істеуге бағытталады.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">11</div><div class="q-text">Концептуалдық дағды</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_11" value="A"> Құжатты толтыру</label>
+<label class="option"><input type="radio" name="q2_11" value="B"> Құралды қолдану</label>
+<label class="option"><input type="radio" name="q2_11" value="C"> Адамды тыңдау</label>
+<label class="option"><input type="radio" name="q2_11" value="D"> Ұйымды тұтас көру</label>
+<label class="option"><input type="radio" name="q2_11" value="E"> Мерзімді бекіту</label></div>
+            <div class="explanation">Дұрыс жауап: D. Концептуалдық дағды ұйымды тұтас көрумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">12</div><div class="q-text">Мінез-құлық тәсілі нені қарайды?</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_12" value="A"> Лидердің тегі</label>
+<label class="option"><input type="radio" name="q2_12" value="B"> Лидердің әрекеті</label>
+<label class="option"><input type="radio" name="q2_12" value="C"> Лидердің жалақысы</label>
+<label class="option"><input type="radio" name="q2_12" value="D"> Лидердің құжаты</label>
+<label class="option"><input type="radio" name="q2_12" value="E"> Лидердің қоймасы</label></div>
+            <div class="explanation">Дұрыс жауап: B. Мінез-құлық тәсілі лидер әрекетін талдайды.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">13</div><div class="q-text">Тапсырмаға бағытталған мінез</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_13" value="A"> Тыңдау және қолдау</label>
+<label class="option"><input type="radio" name="q2_13" value="B"> Сенім және түсіну</label>
+<label class="option"><input type="radio" name="q2_13" value="C"> Рөл мен нәтиже белгілеу</label>
+<label class="option"><input type="radio" name="q2_13" value="D"> Жеке даму беру</label>
+<label class="option"><input type="radio" name="q2_13" value="E"> Қатынас құру</label></div>
+            <div class="explanation">Дұрыс жауап: C. Тапсырмаға бағытталу рөл мен нәтижені нақтылаумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">14</div><div class="q-text">Қарым-қатынасқа бағытталған мінез</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_14" value="A"> Мерзім бекіту</label>
+<label class="option"><input type="radio" name="q2_14" value="B"> Рөл бөлу</label>
+<label class="option"><input type="radio" name="q2_14" value="C"> Стандарт қою</label>
+<label class="option"><input type="radio" name="q2_14" value="D"> Қолдау көрсету</label>
+<label class="option"><input type="radio" name="q2_14" value="E"> Нәтиже өлшеу</label></div>
+            <div class="explanation">Дұрыс жауап: D. Қарым-қатынасқа бағытталу қолдаумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">15</div><div class="q-text">Басшылық стилі немен сипатталады?</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q2_15" value="A"> Қойма көлемімен</label>
+<label class="option"><input type="radio" name="q2_15" value="B"> Бюджет түрімен</label>
+<label class="option"><input type="radio" name="q2_15" value="C"> Өнім бағасымен</label>
+<label class="option"><input type="radio" name="q2_15" value="D"> Құжат санымен</label>
+<label class="option"><input type="radio" name="q2_15" value="E"> Тапсырма және қатынаспен</label></div>
+            <div class="explanation">Дұрыс жауап: E. Стиль тапсырма мен қарым-қатынасқа көңіл бөлу арқылы сипатталады.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-2-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-2-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-3">
+      <div class="content-block">
+        <div class="section-kicker">3-бөлім · Ситуациялық, жол-мақсат және LMX</div>
+        <h3>Жағдайға бейімделу, мақсатқа жетелеу және лидер–мүше алмасуы</h3>
+        <p>Бұл бөлімде ситуациялық көшбасшылық, жол-мақсат теориясы және LMX тәсілі қысқа қарастырылады.</p>
+        <div class="note">Лидер жағдайға, ізбасар дайындығына, тапсырмаға және қатынас сапасына қарай әрекет етеді.</div>
+        <div class="theory-grid"><div class="theory-card"><strong>Ситуациялық көшбасшылық</strong><p>Лидер стилі ізбасардың даму деңгейіне сәйкес болуы керек.</p></div>
+<div class="theory-card"><strong>Директивті мінез</strong><p>Тапсырма, мерзім және нәтиже нақты түсіндіріледі.</p></div>
+<div class="theory-card"><strong>Қолдаушы мінез</strong><p>Тыңдау, қолдау және сенім қалыптастыру.</p></div>
+<div class="theory-card"><strong>Даму деңгейі</strong><p>Құзыреттілік және орындауға дайындық.</p></div>
+<div class="theory-card"><strong>Жол-мақсат теориясы</strong><p>Лидер мақсатқа жету жолын түсіндіреді.</p></div>
+<div class="theory-card"><strong>LMX</strong><p>Лидер мен әр ізбасар арасындағы қатынас сапасы.</p></div></div>
+        <div class="test-box" data-test="northouse-chapter-3-test">
+          <h3>Тест тапсырмалары</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Ситуациялық көшбасшылық идеясы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_1" value="A"> Стиль өзгермейді</label>
+<label class="option"><input type="radio" name="q3_1" value="B"> Стиль бейімделеді</label>
+<label class="option"><input type="radio" name="q3_1" value="C"> Харизма шешеді</label>
+<label class="option"><input type="radio" name="q3_1" value="D"> Билік жеткілікті</label>
+<label class="option"><input type="radio" name="q3_1" value="E"> Мәдениет басты</label></div>
+            <div class="explanation">Дұрыс жауап: B. Лидер стилі жағдайға және ізбасарға бейімделеді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Директивті мінез белгісі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_2" value="A"> Тапсырманы нақтылау</label>
+<label class="option"><input type="radio" name="q3_2" value="B"> Эмоцияны күшейту</label>
+<label class="option"><input type="radio" name="q3_2" value="C"> Шешімді тапсыру</label>
+<label class="option"><input type="radio" name="q3_2" value="D"> Қатынасты кеңейту</label>
+<label class="option"><input type="radio" name="q3_2" value="E"> Мәдениетті өзгерту</label></div>
+            <div class="explanation">Дұрыс жауап: A. Директивті мінез тапсырманы нақтылаумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Қолдаушы мінез мазмұны</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_3" value="A"> Мерзім белгілеу</label>
+<label class="option"><input type="radio" name="q3_3" value="B"> Ереже бекіту</label>
+<label class="option"><input type="radio" name="q3_3" value="C"> Тыңдау және қолдау</label>
+<label class="option"><input type="radio" name="q3_3" value="D"> Шешімді шектеу</label>
+<label class="option"><input type="radio" name="q3_3" value="E"> Рөлді қысқарту</label></div>
+            <div class="explanation">Дұрыс жауап: C. Қолдаушы мінез тыңдау және қолдаумен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Ізбасардың даму деңгейі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_4" value="A"> Лауазыммен</label>
+<label class="option"><input type="radio" name="q3_4" value="B"> Ресурспен</label>
+<label class="option"><input type="radio" name="q3_4" value="C"> Мәдениетпен</label>
+<label class="option"><input type="radio" name="q3_4" value="D"> Құзыреттілікпен</label>
+<label class="option"><input type="radio" name="q3_4" value="E"> Харизмамен</label></div>
+            <div class="explanation">Дұрыс жауап: D. Даму деңгейі құзыреттілікпен және дайындықпен анықталады.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Стильді бейімдеу мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_5" value="A"> Стильді сақтау</label>
+<label class="option"><input type="radio" name="q3_5" value="B"> Қолдауды өзгерту</label>
+<label class="option"><input type="radio" name="q3_5" value="C"> Пікірді шектеу</label>
+<label class="option"><input type="radio" name="q3_5" value="D"> Билікті көбейту</label>
+<label class="option"><input type="radio" name="q3_5" value="E"> Қатынасты бөлу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Лидер бағыт беру мен қолдауды жағдайға қарай өзгертеді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Жол-мақсат теориясы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_6" value="A"> Қасиетті өлшейді</label>
+<label class="option"><input type="radio" name="q3_6" value="B"> Қатынасты бөледі</label>
+<label class="option"><input type="radio" name="q3_6" value="C"> Жолды айқындайды</label>
+<label class="option"><input type="radio" name="q3_6" value="D"> Мәдениетті зерттейді</label>
+<label class="option"><input type="radio" name="q3_6" value="E"> Құжатты бекітеді</label></div>
+            <div class="explanation">Дұрыс жауап: C. Лидер мақсатқа жету жолын айқындайды.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Жол-мақсат мінездері</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_7" value="A"> Қасиеттік, дағдылық</label>
+<label class="option"><input type="radio" name="q3_7" value="B"> Ішкі, сыртқы</label>
+<label class="option"><input type="radio" name="q3_7" value="C"> Гендерлік, мәдени</label>
+<label class="option"><input type="radio" name="q3_7" value="D"> Харизмалық, шынайы</label>
+<label class="option"><input type="radio" name="q3_7" value="E"> Директивті, қолдаушы</label></div>
+            <div class="explanation">Дұрыс жауап: E. Жол-мақсат теориясында директивті және қолдаушы мінездер бар.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">Қатыстырушы көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_8" value="A"> Пікірді тыңдау</label>
+<label class="option"><input type="radio" name="q3_8" value="B"> Шешімді жабу</label>
+<label class="option"><input type="radio" name="q3_8" value="C"> Қадамды шектеу</label>
+<label class="option"><input type="radio" name="q3_8" value="D"> Қатынасты азайту</label>
+<label class="option"><input type="radio" name="q3_8" value="E"> Беделді көтеру</label></div>
+            <div class="explanation">Дұрыс жауап: A. Қатыстырушы лидер ізбасар пікірін тыңдайды.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Жетістікке бағытталған көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_9" value="A"> Стандартты төмендету</label>
+<label class="option"><input type="radio" name="q3_9" value="B"> Мақсатты ауыстыру</label>
+<label class="option"><input type="radio" name="q3_9" value="C"> Жоғары мақсат қою</label>
+<label class="option"><input type="radio" name="q3_9" value="D"> Шешімді беру</label>
+<label class="option"><input type="radio" name="q3_9" value="E"> Қатынасты шектеу</label></div>
+            <div class="explanation">Дұрыс жауап: C. Бұл стиль жоғары стандарт пен күрделі мақсатқа бағытталады.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">LMX тәсілінің мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_10" value="A"> Бір стиль қолдану</label>
+<label class="option"><input type="radio" name="q3_10" value="B"> Қатынас сапасын қарау</label>
+<label class="option"><input type="radio" name="q3_10" value="C"> Техниканы өлшеу</label>
+<label class="option"><input type="radio" name="q3_10" value="D"> Ортаны бағалау</label>
+<label class="option"><input type="radio" name="q3_10" value="E"> Харизманы санау</label></div>
+            <div class="explanation">Дұрыс жауап: B. LMX қатынас сапасын қарастырады.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">11</div><div class="q-text">Жоғары сапалы LMX</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_11" value="A"> Сенім және құрмет</label>
+<label class="option"><input type="radio" name="q3_11" value="B"> Ресми байланыс</label>
+<label class="option"><input type="radio" name="q3_11" value="C"> Қысқа міндет</label>
+<label class="option"><input type="radio" name="q3_11" value="D"> Пікірді шектеу</label>
+<label class="option"><input type="radio" name="q3_11" value="E"> Қатынасты азайту</label></div>
+            <div class="explanation">Дұрыс жауап: A. Жоғары сапалы LMX сенім мен құрметке негізделеді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">12</div><div class="q-text">Төмен сапалы LMX</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q3_12" value="A"> Кең қолдау</label>
+<label class="option"><input type="radio" name="q3_12" value="B"> Белсенді қатысу</label>
+<label class="option"><input type="radio" name="q3_12" value="C"> Ресми рөлмен шектелу</label>
+<label class="option"><input type="radio" name="q3_12" value="D"> Жоғары сенім</label>
+<label class="option"><input type="radio" name="q3_12" value="E"> Күшті құрмет</label></div>
+            <div class="explanation">Дұрыс жауап: C. Төмен сапалы LMX ресми рөлмен шектеледі.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-3-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-3-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-4">
+      <div class="content-block">
+        <div class="section-kicker">4-бөлім · Трансформациялық және қызмет етуші көшбасшылық</div>
+        <h3>Трансформациялық, шынайы, қызмет етуші және бейімделгіш көшбасшылық</h3>
+        <p>Бұл бөлімде өзгеріске бағытталған, шынайы, қызмет етуші және бейімделгіш көшбасшылық қысқа қарастырылады.</p>
+        <div class="note">Лидер адамдарды өзгеріске, дамуға, сенімге және күрделі жағдайға бейімделуге жетелейді.</div>
+        <div class="theory-grid"><div class="theory-card"><strong>Трансформациялық көшбасшылық</strong><p>Лидер ізбасарларды өзгеріске және жоғары мақсатқа бағыттайды.</p></div>
+<div class="theory-card"><strong>Харизма</strong><p>Сенім, тартымдылық және күшті ықпал.</p></div>
+<div class="theory-card"><strong>Идеалдандырылған ықпал</strong><p>Лидер үлгі көрсетіп, сенім қалыптастырады.</p></div>
+<div class="theory-card"><strong>Шабыттандыру</strong><p>Ортақ мақсатты айқын айтып, жігерлендіру.</p></div>
+<div class="theory-card"><strong>Интеллектуалдық ынталандыру</strong><p>Жаңа ойлау мен шығармашылық шешімді қолдау.</p></div>
+<div class="theory-card"><strong>Жеке көңіл бөлу</strong><p>Әр ізбасардың дамуы мен қажеттілігіне назар аудару.</p></div>
+<div class="theory-card"><strong>Шынайы көшбасшылық</strong><p>Өзін тану, ашықтық және құндылыққа сүйену.</p></div>
+<div class="theory-card"><strong>Қызмет етуші көшбасшылық</strong><p>Ізбасарлардың дамуы мен қажеттілігіне қызмет ету.</p></div>
+<div class="theory-card"><strong>Бейімделгіш көшбасшылық</strong><p>Күрделі өзгеріске бейімделуге көмектесу.</p></div></div>
+        <div class="test-box" data-test="northouse-chapter-4-test">
+          <h3>Тест тапсырмалары</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Трансформациялық көшбасшылық мәні</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_1" value="A"> Ережемен реттеу</label>
+<label class="option"><input type="radio" name="q4_1" value="B"> Өзгеріске шабыттандыру</label>
+<label class="option"><input type="radio" name="q4_1" value="C"> Өкілеттікпен шектеу</label>
+<label class="option"><input type="radio" name="q4_1" value="D"> Келісімде қалу</label>
+<label class="option"><input type="radio" name="q4_1" value="E"> Пікірді елемеу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Трансформациялық лидер өзгеріске шабыттандырады.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Харизмалық көшбасшылық белгісі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_2" value="A"> Нұсқаумен шектеу</label>
+<label class="option"><input type="radio" name="q4_2" value="B"> Пікірден бөлу</label>
+<label class="option"><input type="radio" name="q4_2" value="C"> Сеніммен жұмылдыру</label>
+<label class="option"><input type="radio" name="q4_2" value="D"> Техникаға сүйену</label>
+<label class="option"><input type="radio" name="q4_2" value="E"> Қатынасты елемеу</label></div>
+            <div class="explanation">Дұрыс жауап: C. Харизмалық лидер сенім мен тартымдылық арқылы ықпал етеді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Идеалдандырылған ықпал</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_3" value="A"> Үлгі көрсету</label>
+<label class="option"><input type="radio" name="q4_3" value="B"> Мерзім белгілеу</label>
+<label class="option"><input type="radio" name="q4_3" value="C"> Пікірді бөлу</label>
+<label class="option"><input type="radio" name="q4_3" value="D"> Келісіммен шектеу</label>
+<label class="option"><input type="radio" name="q4_3" value="E"> Мәдениетті алмастыру</label></div>
+            <div class="explanation">Дұрыс жауап: A. Идеалдандырылған ықпал лидердің үлгі болуымен байланысты.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Шабыттандырушы мотивация</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_4" value="A"> Рөлді шектеу</label>
+<label class="option"><input type="radio" name="q4_4" value="B"> Нұсқау беру</label>
+<label class="option"><input type="radio" name="q4_4" value="C"> Дамуды елемеу</label>
+<label class="option"><input type="radio" name="q4_4" value="D"> Мақсатпен жігерлендіру</label>
+<label class="option"><input type="radio" name="q4_4" value="E"> Топты бөлу</label></div>
+            <div class="explanation">Дұрыс жауап: D. Шабыттандырушы мотивация ортақ мақсатқа жігерлендіреді.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Интеллектуалдық ынталандыру</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_5" value="A"> Ескі шешімді қайталау</label>
+<label class="option"><input type="radio" name="q4_5" value="B"> Жаңа ойлауды қолдау</label>
+<label class="option"><input type="radio" name="q4_5" value="C"> Ізбасарды алыстату</label>
+<label class="option"><input type="radio" name="q4_5" value="D"> Міндетпен шектеу</label>
+<label class="option"><input type="radio" name="q4_5" value="E"> Талдаудан бас тарту</label></div>
+            <div class="explanation">Дұрыс жауап: B. Бұл компонент жаңа ойлау мен шығармашылықты қолдайды.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Жеке көңіл бөлу</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_6" value="A"> Бірдей нұсқау беру</label>
+<label class="option"><input type="radio" name="q4_6" value="B"> Келісімде қалдыру</label>
+<label class="option"><input type="radio" name="q4_6" value="C"> Жеке дамуға назар аудару</label>
+<label class="option"><input type="radio" name="q4_6" value="D"> Бақылаумен шектеу</label>
+<label class="option"><input type="radio" name="q4_6" value="E"> Беделмен алмастыру</label></div>
+            <div class="explanation">Дұрыс жауап: C. Жеке көңіл бөлу әр ізбасар дамуын ескереді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Шынайы көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_7" value="A"> Өзін тану және ашықтық</label>
+<label class="option"><input type="radio" name="q4_7" value="B"> Пікірді шектеу</label>
+<label class="option"><input type="radio" name="q4_7" value="C"> Қатынасты алмастыру</label>
+<label class="option"><input type="radio" name="q4_7" value="D"> Мәртебемен өлшеу</label>
+<label class="option"><input type="radio" name="q4_7" value="E"> Топты бөлу</label></div>
+            <div class="explanation">Дұрыс жауап: A. Шынайы көшбасшылық өзін тану мен ашықтыққа сүйенеді.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">Қызмет етуші көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_8" value="A"> Беделді күшейту</label>
+<label class="option"><input type="radio" name="q4_8" value="B"> Өкілеттікті ұлғайту</label>
+<label class="option"><input type="radio" name="q4_8" value="C"> Бақылаумен басқару</label>
+<label class="option"><input type="radio" name="q4_8" value="D"> Ізбасарға қызмет ету</label>
+<label class="option"><input type="radio" name="q4_8" value="E"> Қатынастан бөлу</label></div>
+            <div class="explanation">Дұрыс жауап: D. Қызмет етуші лидер ізбасар дамуына қызмет етеді.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Бейімделгіш көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_9" value="A"> Стильді сақтау</label>
+<label class="option"><input type="radio" name="q4_9" value="B"> Өзгеріске бейімдеу</label>
+<label class="option"><input type="radio" name="q4_9" value="C"> Міндетпен шектеу</label>
+<label class="option"><input type="radio" name="q4_9" value="D"> Техникамен шектеу</label>
+<label class="option"><input type="radio" name="q4_9" value="E"> Дайындықты елемеу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Бейімделгіш лидер өзгеріске бейімделуге көмектеседі.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">Трансформациялық компоненттер</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q4_10" value="A"> Директивті, қолдаушы</label>
+<label class="option"><input type="radio" name="q4_10" value="B"> Техникалық, адами</label>
+<label class="option"><input type="radio" name="q4_10" value="C"> Ішкі, сыртқы</label>
+<label class="option"><input type="radio" name="q4_10" value="D"> Құзырет, міндеттеме</label>
+<label class="option"><input type="radio" name="q4_10" value="E"> Ықпал, шабыт, ынталандыру</label></div>
+            <div class="explanation">Дұрыс жауап: E. Трансформациялық көшбасшылық ықпал, шабыт, ынталандыру және жеке көңіл бөлуді қамтиды.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-4-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-4-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-5">
+      <div class="content-block">
+        <div class="section-kicker">5-бөлім · Ізбасарлық, этика, команда және мәдениет</div>
+        <h3>Ізбасарлық, этика, команда, гендер және мәдениет</h3>
+        <p>Бұл бөлімде ізбасарлық, этикалық көшбасшылық, командалық көшбасшылық, гендер және мәдениет қысқа қарастырылады.</p>
+        <div class="note">Көшбасшылыққа ізбасарлар, этика, команда, мәдени орта және тең мүмкіндік әсер етеді.</div>
+        <div class="theory-grid"><div class="theory-card"><strong>Ізбасарлық</strong><p>Ізбасарлар лидерлік процесінің белсенді қатысушысы.</p></div>
+<div class="theory-card"><strong>Ізбасар рөлі</strong><p>Лидер ықпалына жауап береді және нәтижеге әсер етеді.</p></div>
+<div class="theory-card"><strong>Этикалық көшбасшылық</strong><p>Әділдік, адалдық, жауапкершілік және құрмет.</p></div>
+<div class="theory-card"><strong>Моральдық шешім</strong><p>Лидер шешімі адамдарға әсер ететіндіктен этикалық бағаланады.</p></div>
+<div class="theory-card"><strong>Командалық көшбасшылық</strong><p>Топ мақсатын, өзара әрекетті және нәтижені үйлестіру.</p></div>
+<div class="theory-card"><strong>Команда тиімділігі</strong><p>Ортақ мақсат, сенім, рөл анықтығы және байланыс сапасы.</p></div>
+<div class="theory-card"><strong>Гендер және көшбасшылық</strong><p>Теңдік, стереотип және кедергілер мәселесі.</p></div>
+<div class="theory-card"><strong>Мәдениет</strong><p>Лидерлік стиліне және ізбасар күтіміне әсер етеді.</p></div>
+<div class="theory-card"><strong>Мәдениаралық көшбасшылық</strong><p>Әртүрлі құндылық пен норма ескеріледі.</p></div></div>
+        <div class="test-box" data-test="northouse-chapter-5-test">
+          <h3>Тест тапсырмалары</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Ізбасарлық ұғымы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_1" value="A"> Процестен тыс қалу</label>
+<label class="option"><input type="radio" name="q5_1" value="B"> Белсенді қатысу</label>
+<label class="option"><input type="radio" name="q5_1" value="C"> Бақылау құралы болу</label>
+<label class="option"><input type="radio" name="q5_1" value="D"> Мақсатқа әсер етпеу</label>
+<label class="option"><input type="radio" name="q5_1" value="E"> Міндетпен шектелу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Ізбасарлар лидерлік процесіне белсенді қатысады.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Ізбасар рөлі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_2" value="A"> Ықпалға жауап беру</label>
+<label class="option"><input type="radio" name="q5_2" value="B"> Сыртта қалу</label>
+<label class="option"><input type="radio" name="q5_2" value="C"> Шешімге қатыспау</label>
+<label class="option"><input type="radio" name="q5_2" value="D"> Әрекетті тоқтату</label>
+<label class="option"><input type="radio" name="q5_2" value="E"> Құжатпен алмастыру</label></div>
+            <div class="explanation">Дұрыс жауап: A. Ізбасар лидер ықпалына жауап береді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Этикалық көшбасшылық белгісі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_3" value="A"> Беделді жоғары қою</label>
+<label class="option"><input type="radio" name="q5_3" value="B"> Пікірді бөлу</label>
+<label class="option"><input type="radio" name="q5_3" value="C"> Әділдікке сүйену</label>
+<label class="option"><input type="radio" name="q5_3" value="D"> Қатынасты алмастыру</label>
+<label class="option"><input type="radio" name="q5_3" value="E"> Харизмамен шектеу</label></div>
+            <div class="explanation">Дұрыс жауап: C. Этикалық лидер әділдікке сүйенеді.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Лидер шешімінің этикалық бағасы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_4" value="A"> Мерзім белгілейді</label>
+<label class="option"><input type="radio" name="q5_4" value="B"> Өкілеттікті күшейтеді</label>
+<label class="option"><input type="radio" name="q5_4" value="C"> Есеппен шектеледі</label>
+<label class="option"><input type="radio" name="q5_4" value="D"> Адамдарға әсер етеді</label>
+<label class="option"><input type="radio" name="q5_4" value="E"> Мәдениетті жояды</label></div>
+            <div class="explanation">Дұрыс жауап: D. Лидер шешімі адамдарға әсер ететіндіктен этикалық бағаланады.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Командалық көшбасшылық бағыты</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_5" value="A"> Мүшелерді бөлу</label>
+<label class="option"><input type="radio" name="q5_5" value="B"> Әрекетті үйлестіру</label>
+<label class="option"><input type="radio" name="q5_5" value="C"> Келісіммен шектеу</label>
+<label class="option"><input type="radio" name="q5_5" value="D"> Бақылаумен алмастыру</label>
+<label class="option"><input type="radio" name="q5_5" value="E"> Беделді бөлу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Командалық лидер топ әрекетін үйлестіреді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Команда тиімділігі факторы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_6" value="A"> Мақсат, сенім, рөл</label>
+<label class="option"><input type="radio" name="q5_6" value="B"> Пікірді бөлу</label>
+<label class="option"><input type="radio" name="q5_6" value="C"> Сыртқы топ жасау</label>
+<label class="option"><input type="radio" name="q5_6" value="D"> Техникамен шектеу</label>
+<label class="option"><input type="radio" name="q5_6" value="E"> Құжатпен алмастыру</label></div>
+            <div class="explanation">Дұрыс жауап: A. Команда тиімділігі мақсат, сенім және рөл анықтығына тәуелді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Гендер тақырыбы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_7" value="A"> Лауазымды өлшейді</label>
+<label class="option"><input type="radio" name="q5_7" value="B"> Нәтижені алмастырады</label>
+<label class="option"><input type="radio" name="q5_7" value="C"> Теңдік мәселесін ашады</label>
+<label class="option"><input type="radio" name="q5_7" value="D"> Міндетпен шектейді</label>
+<label class="option"><input type="radio" name="q5_7" value="E"> Харизманы өлшейді</label></div>
+            <div class="explanation">Дұрыс жауап: C. Гендер тақырыбы теңдік пен кедергілерді қарастырады.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">Мәдениеттің әсері</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_8" value="A"> Ықпалды жояды</label>
+<label class="option"><input type="radio" name="q5_8" value="B"> Мақсаттан бөледі</label>
+<label class="option"><input type="radio" name="q5_8" value="C"> Бақылаумен алмастырады</label>
+<label class="option"><input type="radio" name="q5_8" value="D"> Стильге әсер етеді</label>
+<label class="option"><input type="radio" name="q5_8" value="E"> Техникаға айналдырады</label></div>
+            <div class="explanation">Дұрыс жауап: D. Мәдениет лидерлік стиліне әсер етеді.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Мәдениаралық көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_9" value="A"> Бір стиль қолданады</label>
+<label class="option"><input type="radio" name="q5_9" value="B"> Құндылықтарды ескереді</label>
+<label class="option"><input type="radio" name="q5_9" value="C"> Пікірді шектейді</label>
+<label class="option"><input type="radio" name="q5_9" value="D"> Құжатпен шектейді</label>
+<label class="option"><input type="radio" name="q5_9" value="E"> Айырманы елемейді</label></div>
+            <div class="explanation">Дұрыс жауап: B. Мәдениаралық лидер әртүрлі құндылықтарды ескереді.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">Бөлімнің ортақ идеясы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q5_10" value="A"> Мәртебе шешеді</label>
+<label class="option"><input type="radio" name="q5_10" value="B"> Ізбасар әсер етпейді</label>
+<label class="option"><input type="radio" name="q5_10" value="C"> Этика бөлек</label>
+<label class="option"><input type="radio" name="q5_10" value="D"> Мәдениет әсерсіз</label>
+<label class="option"><input type="radio" name="q5_10" value="E"> Көшбасшылық кең процесс</label></div>
+            <div class="explanation">Дұрыс жауап: E. Көшбасшылық ізбасар, этика, команда және мәдениетпен байланысты.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-5-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-5-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chapter-6">
+      <div class="content-block">
+        <div class="section-kicker">6-бөлім · Қорытынды тест</div>
+        <h3>Нортхаус бойынша көшбасшылық теорияларын қайталау</h3>
+        <p>Бұл қорытынды тест негізгі ұғымдарды қысқа қайталауға арналған.</p>
+        
+        
+        <div class="test-box" data-test="northouse-chapter-6-test">
+          <h3>Қорытынды тест</h3>
+          <p class="section-desc">Әр сұрақта 5 жауап нұсқасы бар. Бір ғана дұрыс жауапты таңдаңыз.</p>
+          
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">1</div><div class="q-text">Көшбасшылықтың басты өзегі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_1" value="A"> Қаржылық бақылау</label>
+<label class="option"><input type="radio" name="q6_1" value="B"> Ықпал ету процесі</label>
+<label class="option"><input type="radio" name="q6_1" value="C"> Өндірістік жоспар</label>
+<label class="option"><input type="radio" name="q6_1" value="D"> Құжат айналымы</label>
+<label class="option"><input type="radio" name="q6_1" value="E"> Материалдық ресурс</label></div>
+            <div class="explanation">Дұрыс жауап: B. Көшбасшылықтың өзегі — ықпал ету.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">2</div><div class="q-text">Көшбасшылық элементтері</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_2" value="A"> Бюджет, баланс, шығын</label>
+<label class="option"><input type="radio" name="q6_2" value="B"> Қойма, өндіріс, жеткізу</label>
+<label class="option"><input type="radio" name="q6_2" value="C"> Ереже, есеп, бақылау</label>
+<label class="option"><input type="radio" name="q6_2" value="D"> Процесс, ықпал, топ, мақсат</label>
+<label class="option"><input type="radio" name="q6_2" value="E"> Жалақы, лауазым, құжат</label></div>
+            <div class="explanation">Дұрыс жауап: D. Көшбасшылық процесс, ықпал, топ және мақсат арқылы ашылады.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">3</div><div class="q-text">Қасиеттер тәсілі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_3" value="A"> Жеке сипаттарды түсіндіреді</label>
+<label class="option"><input type="radio" name="q6_3" value="B"> Алмасуды сипаттайды</label>
+<label class="option"><input type="radio" name="q6_3" value="C"> Мәдениетті ашады</label>
+<label class="option"><input type="radio" name="q6_3" value="D"> Шешімді бөледі</label>
+<label class="option"><input type="radio" name="q6_3" value="E"> Есепті қарайды</label></div>
+            <div class="explanation">Дұрыс жауап: A. Қасиеттер тәсілі жеке сипаттарды түсіндіреді.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">4</div><div class="q-text">Дағдылар тәсілі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_4" value="A"> Ресми, әкімшілік</label>
+<label class="option"><input type="radio" name="q6_4" value="B"> Қоймалық, өндірістік</label>
+<label class="option"><input type="radio" name="q6_4" value="C"> Гендерлік, мәдени</label>
+<label class="option"><input type="radio" name="q6_4" value="D"> Харизмалық, шынайы</label>
+<label class="option"><input type="radio" name="q6_4" value="E"> Техникалық, адами</label></div>
+            <div class="explanation">Дұрыс жауап: E. Дағдылар тәсілінде техникалық, адами және концептуалдық дағдылар бар.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">5</div><div class="q-text">Мінез-құлық тәсілі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_5" value="A"> Туған қасиет</label>
+<label class="option"><input type="radio" name="q6_5" value="B"> Қаржы балансы</label>
+<label class="option"><input type="radio" name="q6_5" value="C"> Лидер әрекеті</label>
+<label class="option"><input type="radio" name="q6_5" value="D"> Мәдени тарих</label>
+<label class="option"><input type="radio" name="q6_5" value="E"> Құжат құрылымы</label></div>
+            <div class="explanation">Дұрыс жауап: C. Мінез-құлық тәсілі лидер әрекетін талдайды.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">6</div><div class="q-text">Ситуациялық қағида</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_6" value="A"> Бір стиль сақтау</label>
+<label class="option"><input type="radio" name="q6_6" value="B"> Стильді бейімдеу</label>
+<label class="option"><input type="radio" name="q6_6" value="C"> Шешімді бөлу</label>
+<label class="option"><input type="radio" name="q6_6" value="D"> Лауазыммен шектеу</label>
+<label class="option"><input type="radio" name="q6_6" value="E"> Мәдениетке беру</label></div>
+            <div class="explanation">Дұрыс жауап: B. Ситуациялық көшбасшылық стильді бейімдеуді талап етеді.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">7</div><div class="q-text">Жол-мақсат теориясы</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_7" value="A"> Қатынасты шектеу</label>
+<label class="option"><input type="radio" name="q6_7" value="B"> Топты бөлу</label>
+<label class="option"><input type="radio" name="q6_7" value="C"> Қасиетті өлшеу</label>
+<label class="option"><input type="radio" name="q6_7" value="D"> Жолды айқындау</label>
+<label class="option"><input type="radio" name="q6_7" value="E"> Мәдениетті талдау</label></div>
+            <div class="explanation">Дұрыс жауап: D. Жол-мақсат теориясында лидер жолды айқындайды.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">8</div><div class="q-text">LMX өлшемі</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_8" value="A"> Қатынас сапасы</label>
+<label class="option"><input type="radio" name="q6_8" value="B"> Техникалық білім</label>
+<label class="option"><input type="radio" name="q6_8" value="C"> Өндіріс стандарты</label>
+<label class="option"><input type="radio" name="q6_8" value="D"> Қаржы жоспары</label>
+<label class="option"><input type="radio" name="q6_8" value="E"> Гендер тізімі</label></div>
+            <div class="explanation">Дұрыс жауап: A. LMX қатынас сапасын қарайды.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">9</div><div class="q-text">Трансформациялық лидерлік</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_9" value="A"> Келісіммен шектеу</label>
+<label class="option"><input type="radio" name="q6_9" value="B"> Ережемен беру</label>
+<label class="option"><input type="radio" name="q6_9" value="C"> Өзгеріске бағыттау</label>
+<label class="option"><input type="radio" name="q6_9" value="D"> Пікірді бөлу</label>
+<label class="option"><input type="radio" name="q6_9" value="E"> Мәдениетті елемеу</label></div>
+            <div class="explanation">Дұрыс жауап: C. Трансформациялық лидер өзгеріске бағыттайды.</div>
+          </div>
+
+          <div class="question" data-answer="B">
+            <div class="question-title"><div class="q-num">10</div><div class="q-text">Қызмет етуші лидерлік</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_10" value="A"> Беделді күшейту</label>
+<label class="option"><input type="radio" name="q6_10" value="B"> Ізбасарға қызмет ету</label>
+<label class="option"><input type="radio" name="q6_10" value="C"> Бақылаумен алмастыру</label>
+<label class="option"><input type="radio" name="q6_10" value="D"> Міндетпен шектеу</label>
+<label class="option"><input type="radio" name="q6_10" value="E"> Техникамен шектеу</label></div>
+            <div class="explanation">Дұрыс жауап: B. Қызмет етуші лидер ізбасар дамуына қызмет етеді.</div>
+          </div>
+
+          <div class="question" data-answer="D">
+            <div class="question-title"><div class="q-num">11</div><div class="q-text">Этикалық көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_11" value="A"> Беделді жоғары қою</label>
+<label class="option"><input type="radio" name="q6_11" value="B"> Пікірді бөлу</label>
+<label class="option"><input type="radio" name="q6_11" value="C"> Қатынасты алмастыру</label>
+<label class="option"><input type="radio" name="q6_11" value="D"> Әділдік және құрмет</label>
+<label class="option"><input type="radio" name="q6_11" value="E"> Харизмамен шектеу</label></div>
+            <div class="explanation">Дұрыс жауап: D. Этикалық көшбасшылық әділдік пен құрметке сүйенеді.</div>
+          </div>
+
+          <div class="question" data-answer="A">
+            <div class="question-title"><div class="q-num">12</div><div class="q-text">Командалық көшбасшылық</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_12" value="A"> Топ әрекетін үйлестіру</label>
+<label class="option"><input type="radio" name="q6_12" value="B"> Мүшені бақылаушы ету</label>
+<label class="option"><input type="radio" name="q6_12" value="C"> Мақсатты алмастыру</label>
+<label class="option"><input type="radio" name="q6_12" value="D"> Келісіммен шектеу</label>
+<label class="option"><input type="radio" name="q6_12" value="E"> Ізбасарды елемеу</label></div>
+            <div class="explanation">Дұрыс жауап: A. Командалық көшбасшылық топ әрекетін үйлестіреді.</div>
+          </div>
+
+          <div class="question" data-answer="C">
+            <div class="question-title"><div class="q-num">13</div><div class="q-text">Мәдениет әсері</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_13" value="A"> Ықпалды жояды</label>
+<label class="option"><input type="radio" name="q6_13" value="B"> Мақсаттан бөледі</label>
+<label class="option"><input type="radio" name="q6_13" value="C"> Стильге әсер етеді</label>
+<label class="option"><input type="radio" name="q6_13" value="D"> Құжатпен алмастырады</label>
+<label class="option"><input type="radio" name="q6_13" value="E"> Қаржымен шектейді</label></div>
+            <div class="explanation">Дұрыс жауап: C. Мәдениет лидерлік стиліне әсер етеді.</div>
+          </div>
+
+          <div class="question" data-answer="E">
+            <div class="question-title"><div class="q-num">14</div><div class="q-text">Нортхаус бағыты</div></div>
+            <div class="options"><label class="option"><input type="radio" name="q6_14" value="A"> Қаржы және қойма</label>
+<label class="option"><input type="radio" name="q6_14" value="B"> Баланс және капитал</label>
+<label class="option"><input type="radio" name="q6_14" value="C"> Логистика және өткізу</label>
+<label class="option"><input type="radio" name="q6_14" value="D"> Бюджет және есеп</label>
+<label class="option"><input type="radio" name="q6_14" value="E"> Қасиет және ықпал</label></div>
+            <div class="explanation">Дұрыс жауап: E. Нортхаус көшбасшылықты қасиет, дағды, жағдай, ықпал, этика және мәдениет арқылы түсіндіреді.</div>
+          </div>
+          <button class="btn btn-primary" type="button" onclick="checkSection('northouse-chapter-6-test')">Нәтижені көрсету</button>
+          <div class="result-panel" id="result-northouse-chapter-6-test"><strong>Нәтиже:</strong> <span class="result-text">Жауаптар тексерілгеннен кейін нәтиже осы жерде көрсетіледі.</span></div>
+        </div>
+      </div>
+    </section>
+    <footer class="content-block" style="margin-top: 30px;">
+      <div class="section-kicker">Сайт аяқталды</div>
+      <h3>Питер Г. Нортхаус · Көшбасшылық: теория және практика</h3>
+      <p>Бұл сайт Нортхаус еңбегінің негізгі көшбасшылық теориялары бойынша қысқа дайындалды. Материал КТ тақырыптарына сай жүйеленді.</p>
+      <p>Әр сұрақта 5 жауап нұсқасы бар және бір ғана дұрыс жауап таңдалады. “Нәтижені көрсету” батырмасын басқаннан кейін дұрыс жауап жасыл түспен, қате таңдалған жауап қызыл түспен көрсетіледі.</p>
+      <p style="margin-bottom: 0; color: var(--muted);">© @elnazm_ln</p>
+    </footer>
+  </div>
+  <a class="floating-up" href="#top" aria-label="Жоғары көтерілу">↑</a>
+  <script>
+    function getSelectedAnswer(question) {
+      const selected = question.querySelector('input[type="radio"]:checked');
+      return selected ? selected.value.trim() : '';
+    }
+    function checkSection(testId) {
+      const testBox = document.querySelector(`[data-test="${testId}"]`);
+      const resultPanel = document.getElementById(`result-${testId}`);
+      if (!testBox || !resultPanel) return;
+      const questions = Array.from(testBox.querySelectorAll('.question'));
+      let correctCount = 0;
+      questions.forEach(question => {
+        const correctAnswer = (question.dataset.answer || '').trim();
+        const selectedAnswer = getSelectedAnswer(question);
+        const options = Array.from(question.querySelectorAll('.option'));
+        question.classList.add('checked');
+        options.forEach(option => {
+          option.classList.remove('correct', 'wrong');
+          const input = option.querySelector('input[type="radio"]');
+          if (!input) return;
+          const value = input.value.trim();
+          if (value === correctAnswer) option.classList.add('correct');
+          if (value === selectedAnswer && value !== correctAnswer) option.classList.add('wrong');
+        });
+        if (selectedAnswer === correctAnswer) correctCount++;
+      });
+      const total = questions.length;
+      const percent = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+      const resultText = resultPanel.querySelector('.result-text');
+      if (resultText) resultText.textContent = `${correctCount} / ${total} дұрыс жауап · ${percent}%`;
+      resultPanel.classList.add('show');
+      resultPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+</body>
+</html>
